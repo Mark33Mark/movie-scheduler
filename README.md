@@ -1,4 +1,4 @@
-![Mark Watson](./assets/tech_yes_banner.png)
+![Mark Watson](./assets/OutdoorCinemaScreen.png)
 # Team Project 2
 ## Movie Scheduler - Flicked
 
@@ -20,7 +20,7 @@
 **What is this project?**  
 * S
 
-* Technologies used are MySQL2, Sequelize, MySQL database, Node.js, Express.js and dotenv.
+* Technologies used are  Sequelize, MySQL database, Node.js, Express.js and dotenv.
 
 **Why this project?**  
 * E
