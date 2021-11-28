@@ -1,3 +1,4 @@
+
 DROP DATABASE IF EXISTS flicker_db;
 CREATE DATABASE flicker_db;
 USE flicker_db;
@@ -63,6 +64,4 @@ Ref: upcoming_movies.genre_id > genres.genre_id
 Ref: users.user_id > watchlist.user_id  
 Ref:  genres.genre_id > moviewatcher.upcoming_movies
 Ref: users.user_id > moviewatcher.users 
-
-
 
