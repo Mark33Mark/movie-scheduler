@@ -15,9 +15,14 @@ Watchlist.init(
     movie_id: {
         type: DataTypes.STRING,
         references: {
-            model: 'movies',
-            key: 'id',
+            model: 'upcoming_movies',
+            key: 'tmdb_movie_id',
         },
+    },
+
+    notification_period: {
+        type: DataTypes.ENUM,
+        values: ['3 days','1 week', '2 weeks'],
     },
 
     user_id: {
@@ -39,7 +44,7 @@ Watchlist.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Watchlist',
+    modelName: 'watchlist',
   }
 );
 

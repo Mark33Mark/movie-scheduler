@@ -5,7 +5,7 @@ const addToWatchlist = async (event) => {
     {{movie_id.title}}
     {{movie_id.description}}
     {{movie_id.releaseDate}}
-    {{movie_id.image}}
+    {{movie_id.genre}}
   
     //const movieName = document.querySelector('#movieName').value.trim();
     //const genre = document.querySelector('#genreList').value.trim();
@@ -26,35 +26,28 @@ const addToWatchlist = async (event) => {
       }
   };
   
-  const signupFormHandler = async ( event ) => {
-    
-    event.preventDefault();
-  
-    const username = document.getElementById("name-signup").value.trim();
-    const email = document.getElementById("email-signup").value.trim();
-    const password = document.getElementById("password-signup").value.trim();
-  
-      if (username && email && password) {
-        const response = await fetch('/api/users', {
-          method: 'POST',
-          body: JSON.stringify({ username, email, password }),
-          headers: { 'Content-Type': 'application/json' },
-        });
-  
-      if (response.ok) {
-        document.location.replace('/profile');
-      } else {
-        alert(response.statusText);
-      }
-    }
-  };
-
   const delButton = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
       const response = await fetch(`/api/watchlist/${id}`, {
         method: 'DELETE',
+      });
+  
+      if (response.ok) {
+        document.location.replace('/watchlist');
+      } else {
+        alert('Failed to delete from watchlist');
+      }
+    }
+  };
+
+  const emailButton = async (event) => {
+    if (event.target.hasAttribute('data-id')) {
+      const id = event.target.getAttribute('data-id');
+  
+      const response = await fetch(`/api/watchlist`, {
+        method: 'GET',
       });
   
       if (response.ok) {
@@ -72,3 +65,7 @@ const addToWatchlist = async (event) => {
   document
     .querySelector( ".add-to-watchlist" )
     .addEventListener('click', delButton);
+
+    document
+    .querySelector( ".emailLink" )
+    .addEventListener('submit', emailButton);
