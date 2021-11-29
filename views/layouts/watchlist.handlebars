@@ -1,16 +1,17 @@
 <div class="row mb-4">
-  <div class = "col-auto">
+  <div class = "col-auto emailLink">
     <h2>Watch List</h2>
-    <p id="randPhrase">Start stocking up on popcorn, here are your upcoming movies</p>
+    <p>Start stocking up on popcorn, here are your upcoming movies</p>
     </div>
 
     {{#each movies as |movie|}}
-    <div class="text-center">
+    <div class="text-center add-to-watchlist">
     <img src = {{movieImage}}></img>
     <h2>{{movieName}}</h2>
     <p>{{releaseDate}}</p> <!-- maybe add days until release date? -->
     <p>{{description}}</p>
     </div>
     {{/each}}
-  
+
+
   </div>
