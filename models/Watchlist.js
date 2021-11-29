@@ -26,6 +26,12 @@ Watchlist.init(
         model: 'user',
         key: 'id',
     },
+
+    // If they want a notification 3 days, 1 week or two weeks out from release date
+    notification_period: {
+        type: DataTypes.ENUM,
+        values: ['3 Days', '1 Week', '2 Weeks']
+    },
     },
   },
   {

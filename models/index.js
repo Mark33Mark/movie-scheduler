@@ -1,39 +1,33 @@
 
-const Comment = require('./Comment');
-const Post    = require('./Post');
+const Genres = require('./Genres');
+const Upcoming_Movies    = require('./Upcoming_Movies');
 const User    = require('./User');
+const Watchlist    = require('./Watchlist');
 
 // Model relationships.
-User.hasMany(Post, {
+User.hasMany(Upcoming_Movies, {
     foreignKey: 'user_id'
 });
 
-Post.belongsTo(User, {
-    foreignKey: 'user_id'
-});
-
-Comment.belongsTo(User, {
+Upcoming_Movies.belongsTo(User, {
     foreignKey: 'user_id',
-    onDelete: 'cascade',
-    hooks:true
+    key: 'id',
 });
 
-Comment.belongsTo(Post, {
-    foreignKey: 'post_id',
-    onDelete: 'cascade',
-    hooks: true
-});
+Upcoming_Movies.belongsTo(Watchlist, {
+    foreignKey: 'upcoming_movies',
+    key: 'tmdb_movie_id',
+})
 
-User.hasMany(Comment, {
+Watchlist.belongsTo(User, {
     foreignKey: 'user_id',
-    onDelete: 'cascade',
-    hooks:true
-});
+    key: 'id',
+})
 
-Post.hasMany(Comment, {
-    foreignKey: 'post_id',
-    onDelete: 'cascade',
-    hooks:true
-});
+Upcoming_Movies.hasMany(Genres, {
+    foreignKey: 'genres',
+    key: 'tmdb_genre_id',
+})
 
-module.exports = { User, Post, Comment };
+
+module.exports = { User, Genres, Upcoming_Movies, Watchlist };
