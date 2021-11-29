@@ -4,7 +4,8 @@ const usersData = [
   {
     user_id: 1,
     user_name: '',
-    email: ''
+    email: '',
+    opt_in: ''
   },
 ];
 
