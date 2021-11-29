@@ -1,12 +1,17 @@
 const addToWatchlist = async (event) => {
     event.preventDefault();
+
+    //Get info from selected movie database
+    {{movie_id.title}}
+    {{movie_id.description}}
+    {{movie_id.releaseDate}}
+    {{movie_id.image}}
   
-    const movieName = document.querySelector('#movieName').value.trim();
-    const genre = document.querySelector('#genreList').value.trim();
-    const releaseDate = document.querySelector('#releaseDate').value.trim();
-    const description = document.querySelector('#movieDesc').value.trim();
+    //const movieName = document.querySelector('#movieName').value.trim();
+    //const genre = document.querySelector('#genreList').value.trim();
+    //const releaseDate = document.querySelector('#releaseDate').value.trim();
+    //const description = document.querySelector('#movieDesc').value.trim();
   
-    if (movieName && genre && releaseDate && description) {
       const response = await fetch('/api/watchlist', {
         method: 'POST',
         body: JSON.stringify({ movieName, genre, releaseDate, description }),
@@ -19,7 +24,6 @@ const addToWatchlist = async (event) => {
       } else {
         alert(response.statusText);
       }
-    }
   };
   
   const signupFormHandler = async ( event ) => {
@@ -44,7 +48,27 @@ const addToWatchlist = async (event) => {
       }
     }
   };
+
+  const delButton = async (event) => {
+    if (event.target.hasAttribute('data-id')) {
+      const id = event.target.getAttribute('data-id');
+  
+      const response = await fetch(`/api/watchlist/${id}`, {
+        method: 'DELETE',
+      });
+  
+      if (response.ok) {
+        document.location.replace('/watchlist');
+      } else {
+        alert('Failed to delete from watchlist');
+      }
+    }
+  };
   
   document
     .querySelector( ".add-to-watchlist" )
     .addEventListener('submit', addToWatchlist);
+
+  document
+    .querySelector( ".add-to-watchlist" )
+    .addEventListener('click', delButton);
