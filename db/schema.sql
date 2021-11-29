@@ -3,65 +3,47 @@ DROP DATABASE IF EXISTS flicker_db;
 CREATE DATABASE flicker_db;
 USE flicker_db;
 
-CREATE TABLE moviewatcher (
-  upcoming_movies VARCHAR(30) NOT NULL,
-  users INT NOT NULL,
-  watchlist VARCHAR(30) NOT NULL,
-  PRIMARY KEY (upcoming_movies_id)
-  PRIMARY KEY (watchlist_id)
+CREATE TABLE genres(
+  id INT NOT NULL AUTO_INCREMENT,
+  tmdb_genre_id INT NOT NULL,
+  genre_name VARCHAR(30) NOT NULL,
+  PRIMARY KEY (id)
 );
 
-CREATE TABLE genres {
-  genre_id INT NOT NULL AUTO INCREMENT,
-  genre_name VARCHAR(30) NOT NULL,
-  PRIMARY KEY (genre_id)
-  FOREIGN KEY (genre_id)
-  REFERENCES moviewatcher(upcoming_movies_id)
-  FOREIGN KEY (genre_id)
-  REFERENCES moviewatcher(watchlist_id)
-  genre_id int [pk, increment]
-  movie_id int 
-  movie_name varchar
-  release_date int
+-- dont need watcholist - render 
 
-}
+CREATE TABLE upcoming_movies(
+   id INT NOT NULL AUTO_INCREMENT,
+   tmdb_genre_id INT NOT NULL,
+   genre_name VARCHAR(30) NOT NULL,
+   tmdb_movie_id INT NOT NULL,
+   movie_name VARCHAR(30) NOT NULL,
+   release_date INT NOT NULL,
+   synopsis VARCHAR(1000) NOT NULL,
+   poster_path INT,
+   backdrop_path INT,
+   popularity DECIMAL,
+   original_language VARCHAR(30),
+   PRIMARY KEY (id),
+   FOREIGN KEY (id)
+   REFERENCES genres(id)
+);
 
-Table moviewatcher {
-  upcoming_movies int [pk, increment]
-  users int [pk, increment]
-}
+CREATE TABLE users(
+   id INT NOT NULL AUTO_INCREMENT,
+   username VARCHAR(30) NOT NULL,
+   email VARCHAR(30) NOT NULL,
+   opt_in boolean,
+   PRIMARY KEY (id)
+);
 
-Table users {
-  user_id int [pk, increment]
-  user_name varchar
-}
-
-Table genres {
-  genre_id int [pk, increment]
-  genre_name varchar
-}
-
-Table upcoming_movies {
-  genre_id int [pk, increment]
-  movie_id int 
-  movie_name varchar
-  release_date int
- }
-
-Table watchlist {
-  user_id int [pk, increment]
-  genre_id int
-  movie_id int 
-  movie_name varchar
-  release_date int
-}
-
-
-// Creating references
-// You can also define relaionship separately
-// > many-to-one; < one-to-many; - one-to-one
-Ref: upcoming_movies.genre_id > genres.genre_id  
-Ref: users.user_id > watchlist.user_id  
-Ref:  genres.genre_id > moviewatcher.upcoming_movies
-Ref: users.user_id > moviewatcher.users 
-
+CREATE TABLE watchlist(
+   id INT NOT NULL AUTO_INCREMENT,
+   tmdb_movie_id INT NOT NULL,
+   notification_period INT NOT NULL,
+   PRIMARY KEY (id),
+   FOREIGN KEY (id)
+   REFERENCES users(id),
+   FOREIGN KEY (tmdb_movie_id)
+   REFERENCES upcoming_movies(id)
+);
