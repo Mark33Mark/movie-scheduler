@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Watchlist extends Model {}
+class UserMovie extends Model {}
 
-Watchlist.init(
+UserMovie.init(
 {
   id: {
     type: DataTypes.INTEGER,
@@ -23,7 +23,7 @@ Watchlist.init(
   movie_id: {
       type: DataTypes.INTEGER,
       references: {
-          model: 'upcoming',
+          model: 'movie',
           key: 'id',
       },
   },
@@ -44,8 +44,8 @@ Watchlist.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'watchlist',
+    modelName: 'usermovie',
     }
 );
 
-module.exports = Watchlist;
+module.exports = UserMovie;
