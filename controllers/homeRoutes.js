@@ -60,6 +60,34 @@ router.get('/upcoming/:id', async (req, res) => {
     }
   });
 
+    //Get watchlist
+    router.get('/watchlist', async (req, res) => {
+        try {
+        const watchlistData = await Watchlist.findAll({
+            include: [
+            {
+                model: User,
+                attributes: ['name'],
+    
+            },
+            {
+                model: Watchlist,
+                attributes: ['movie_id'],
+            },
+            ],
+        });
+    
+        const watchlist = watchlistData.get({ plain: true });
+    
+        res.render('watchlist', {
+            ...watchlist,
+            logged_in: req.session.logged_in
+        });
+        } catch (err) {
+        res.status(500).json(err);
+        }
+    });
+
 
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
