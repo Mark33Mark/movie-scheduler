@@ -1,33 +1,34 @@
 
-const Genres = require('./Genres');
-const Upcoming_Movies    = require('./Upcoming_Movies');
-const User    = require('./User');
-const Watchlist    = require('./Watchlist');
+const Genre     = require('./Genre');
+const Upcoming  = require('./Upcoming');
+const User      = require('./User');
+const Watchlist = require('./Watchlist');
 
 // Model relationships.
-User.hasMany(Upcoming_Movies, {
+User.hasMany(Watchlist, {
     foreignKey: 'user_id'
 });
 
-Upcoming_Movies.belongsTo(User, {
-    foreignKey: 'user_id',
-    key: 'id',
+Watchlist.belongsTo( User, {
+    foreignKey: 'user_id'
 });
 
-Upcoming_Movies.belongsTo(Watchlist, {
-    foreignKey: 'upcoming_movies',
-    key: 'tmdb_movie_id',
-})
+Upcoming.hasMany(Watchlist, {
+    foreignKey: 'movie_id',
+    onDelete: "CASCADE",
+});
 
-Watchlist.belongsTo(User, {
-    foreignKey: 'user_id',
-    key: 'id',
-})
+Watchlist.belongsTo(Upcoming, {
+    foreignKey: 'movie_id',
+    onDelete: "CASCADE",
+});
 
-Upcoming_Movies.hasMany(Genres, {
-    foreignKey: 'genres',
-    key: 'tmdb_genre_id',
-})
+Genre.hasMany(Upcoming, {
+    foreignKey: 'genre_id',
+});
 
+Upcoming.belongsTo(Genre, {
+    foreignKey: 'genre_id',
+});
 
-module.exports = { User, Genres, Upcoming_Movies, Watchlist };
+module.exports = { User, Genre, Upcoming, Watchlist };

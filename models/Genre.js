@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Genre extends Model {}
 
-Genres.init(
+Genre.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -20,9 +20,6 @@ Genres.init(
     genre_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [5],
-      },
     },
   },
   {
