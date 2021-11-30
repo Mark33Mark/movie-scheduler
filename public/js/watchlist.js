@@ -1,5 +1,5 @@
 const addToWatchlist = async (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
     //Get info from selected movie database
     {{movie_id.title}}
@@ -43,19 +43,20 @@ const addToWatchlist = async (event) => {
   };
 
   const emailButton = async (event) => {
-    if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
+    event.preventDefault();
   
-      const response = await fetch(`/api/watchlist`, {
-        method: 'GET',
+      const response = await fetch('/api/watchlist', {
+        method: 'POST',
+        body: JSON.stringify({ movieName, genre, releaseDate, description }),
+        headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
-        document.location.replace('/watchlist');
+        // If successful, redirect to movies page
+        document.location.replace('/profile');
       } else {
-        alert('Failed to delete from watchlist');
+        alert(response.statusText);
       }
-    }
   };
   
   document
