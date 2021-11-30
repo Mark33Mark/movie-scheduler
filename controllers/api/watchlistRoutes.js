@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-//route to get a Watchlist
+//route to get a movie from Watchlist
 router.get('/:id', async (req, res) => {
   try {
     const WatchlistData = await Watchlist.findByPk(req.params.id, {
@@ -42,7 +42,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-//route to delete Watchlist, link up to delete button
+//route to delete movie from Watchlist, link up to delete button
 router.delete('/:id', async (req, res) => {
   try {
     const WatchlistData = await Watchlist.destroy({
