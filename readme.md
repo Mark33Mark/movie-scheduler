@@ -2,14 +2,14 @@
 # Team Project 2
 ## Movie Scheduler - Flicked
 
+[![Github Commits](https://img.shields.io/github/commit-activity/w/Mark33Mark/movie-scheduler)](https://github.com/Mark33Mark/movie-scheduler/commits)
+[![GitHub latest commit](https://img.shields.io/github/last-commit/Mark33Mark/movie-scheduler)](https://github.com/Mark33Mark/movie-scheduler/branches)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://choosealicense.com/licenses/mit/)
-[![Github Commits](https://img.shields.io/github/commit-activity/w/Mark33Mark/movie-schedular)](https://github.com/Mark33Mark/movie-schedular/commits)
-[![GitHub latest commit](https://img.shields.io/github/last-commit/Mark33Mark/movie-schedular)](https://github.com/Mark33Mark/movie-schedular/branches)
 [![GitHub followers](https://img.shields.io/github/followers/Mark33Mark.svg)]()
 ![GitHub repo size](https://img.shields.io/github/repo-size/Mark33Mark/movie-schedular)
-[![GitHub issues](https://img.shields.io/github/issues/Mark33Mark/movie-schedular)](https://img.shields.io/github/issues/Mark33Mark/movie-schedular)
-![GitHub forks](https://img.shields.io/github/forks/Mark33Mark/movie-schedular)
-![GitHub language count](https://img.shields.io/github/languages/count/Mark33Mark/movie-schedular)
+[![GitHub issues](https://img.shields.io/github/issues/Mark33Mark/movie-scheduler)](https://img.shields.io/github/issues/Mark33Mark/movie-scheduler)
+![GitHub forks](https://img.shields.io/github/forks/Mark33Mark/movie-scheduler)
+![GitHub language count](https://img.shields.io/github/languages/count/Mark33Mark/movie-scheduler)
 
 ### Table of Contents  
   
