@@ -1,9 +1,12 @@
 const router = require('express').Router();
 
+
+const carousalRoutes=require('./carousalRoutes');
 const userRoutes = require('./userRoutes');
 const projectRoutes = require('./projectRoutes');
 const watchlistRoutes = require('./watchlistRoutes');
 
+router.use("/",carousalRoutes)
 router.use('/users', userRoutes);
 router.use('/projects', projectRoutes);
 router.use('/watchlists', watchlistRoutes);
