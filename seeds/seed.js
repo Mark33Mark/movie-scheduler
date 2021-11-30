@@ -1,9 +1,9 @@
 const sequelize = require('../config/connection');
-// const { User, Movie, Genre, Watchlist } = require('../models');
+const { User, Upcoming, Genre, Watchlist } = require('../models');
 
 const watchlistData = require('./watchlistData.json');
-const usersData = require('./usersData.json');
-const moviedata = require('./moviedata.json');
+const userData = require('./userData.json');
+const movieData = require('./movieData.json');
 const genreData = require('./genreData.json');
 
 const seedDatabase = async () => {
