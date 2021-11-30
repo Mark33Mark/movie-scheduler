@@ -6,10 +6,7 @@
 
     {{#each movies as |movie|}}
     <div class="text-center add-to-watchlist">
-    <img src = {{movieImage}}></img>
-    <h2>{{movieName}}</h2>
-    <p>{{releaseDate}}</p> <!-- maybe add days until release date? -->
-    <p>{{description}}</p>
+    <p>{{movie.movie_id}}</p>
     </div>
     {{/each}}
 

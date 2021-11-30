@@ -1,6 +1,11 @@
-var nodemailer = require('nodemailer');
+const { response } = require('express');
+const nodemailer = require('nodemailer');
+const hbs = require('nodemailer-express-handlebars');
+const { Watchlist } = require('../models');
+const { User } = require('../models');
+//const emailTemplate = require('../views/emailContent.handlebars')
 
-var transporter = nodemailer.createTransport({
+let transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'zachtestacct@gmail.com',
@@ -8,12 +13,29 @@ var transporter = nodemailer.createTransport({
   }
 });
 
-var mailOptions = {
-  from: 'zachtestacct@gmail.com',
-  to: 'zachobba@gmail.com',
-  subject: 'Sending Email using Node.js',
-  text: 'Sent email with nodeMailer.js!'
+let options = {
+  viewEngine : {
+    extname: '.handlebars', // handlebars extension
+    layoutsDir: 'views/layouts/', // location of handlebars templates
+    defaultLayout: 'email', // name of main template
+  },
+  viewPath: 'views/layouts/',
+  extName: '.handlebars'
 };
+
+transporter.use('compile', hbs(options)); 
+
+  let mailOptions = {
+    from: 'zachtestacct@gmail.com',
+    //multiple recipients by doing 'zachobba@gmail.com, zachobba1@gmail.com,
+    to: 'zachobba@gmail.com',
+    subject: `Reminder about an upcoming movie`,
+    template: 'email',
+    context: {
+      movie: "Avengers Whatever", //replace with movie.title
+      name: "Zac" , //replace with user.name
+    }
+  };
 
 transporter.sendMail(mailOptions, function(error, info){
   if (error) {
