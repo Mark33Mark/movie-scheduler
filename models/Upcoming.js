@@ -1,22 +1,22 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Upcoming_Movies extends Model {}
+class Upcoming extends Model {}
 
-Upcoming_Movies.init(
-  {
+Upcoming.init(
+{
     id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
     },
 
-    tmdb_genre_id: {
+    genre_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'genres',
-            key: 'tmdb_genre_id',
+            model: 'genre',
+            key: 'id',
         },
     },
 
@@ -25,22 +25,17 @@ Upcoming_Movies.init(
         allowNull: false,
     },
 
-    movie_name: {
+    title: {
         type: DataTypes.STRING,
         allowNull: false,
     },
 
     release_date: {
-        type: DataTypes.DATEONLY,
-        
+        type: DataTypes.DATEONLY,     
     },
 
-    synopsis: {
+    overview: {
         type: DataTypes.TEXT,
-    },
-
-    poster_path: {
-        type: DataTypes.STRING,
     },
 
     language: {
@@ -48,21 +43,24 @@ Upcoming_Movies.init(
     },
 
     popularity: {
-        type: DataTypes.DECIMAL,
+        type: DataTypes.DECIMAL(5, 3),
+    },
+
+    poster_path: {
+        type: DataTypes.STRING,
     },
 
     backdrop_path: {
         type: DataTypes.STRING,
     },
-
-  },
-  {
+},
+    {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'upcoming_movies',
-  }
+    modelName: 'upcoming',
+    }
 );
 
-module.exports = Upcoming_Movies;
+module.exports = Upcoming;
