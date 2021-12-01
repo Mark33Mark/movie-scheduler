@@ -12,11 +12,15 @@
             <a href="#">
                 <img src = "./img/PlaceHolder.jpg" alt="" height="600px" width="400px"/> 
             </a>
-            {{!-- <h2>{{movieName}}</h2>
-            <p>{{releaseDate}}</p> <!-- maybe add days until release date? -->
-            <p>{{description}}</p> --}}
             {{/if}}
+
+            <div class="movie-info">
+                <p class="title">{{movie.title}}</p>
+                <p class="release">{{format_date movie.release_date}}</p>               
+            </div>
         </div>
+
+
 
     {{/each}}
 
