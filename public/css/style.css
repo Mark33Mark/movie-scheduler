@@ -87,60 +87,57 @@ a {
   visibility: visible;
 }
 
-
+header {
+  padding: 40px;
+  text-align: center; 
+  /* background: var(--primary); */
+  /* color: var(--secondary); */
+  border-bottom-style: solid;
+}
   
-  header {
-    padding: 40px;
-    text-align: center; 
-    /* background: var(--primary); */
-    background: white;
-    /* color: var(--secondary); */
-    border-bottom-style: solid;
-  }
-  
-  .no-button{
-    background-color: white;
-    border: none;
-    color: #1b89bc;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-  }
+.no-button{
+  background-color: white;
+  border: none;
+  color: #1b89bc;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
 
-  .no-button:hover{
-    color: black;
-    text-decoration: underline;
-  }
+.no-button:hover{
+  color: black;
+  text-decoration: underline;
+}
 
-  .project{
-    width: 60rem;
-    border-bottom: 0.25rem solid rgb(230, 230, 230);
-  }
+.project{
+  width: 60rem;
+  border-bottom: 0.25rem solid rgb(230, 230, 230);
+}
 
-  .project-name>h2{
-    font-size: 1.6rem;
-  }
+.project-name>h2{
+  font-size: 1.6rem;
+}
 
-  .funds-needed{
-    text-align: center;
-    background-color: rgb(210, 210, 150);
-  }
+.funds-needed{
+  text-align: center;
+  background-color: rgb(210, 210, 150);
+}
 
-  aside {
-    flex: 0;
-    background-color: var(--tertiary);
-    padding: 80px;
-    text-align: left;
-    color: var(--light);
-  }
-  
-  nav {
-    display: flex;
-    align-items: center;
-  }
-  
+aside {
+  flex: 0;
+  background-color: var(--tertiary);
+  padding: 80px;
+  text-align: left;
+  color: var(--light);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
