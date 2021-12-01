@@ -1,12 +1,19 @@
 <div class="row mb-4">
   <div class = "col-auto emailLink">
     <h2>Watch List</h2>
-    <p>Start stocking up on popcorn, here are your upcoming movies</p>
+    <p>{{name}} Start stocking up on popcorn, here are your upcoming movies</p>
     </div>
 
     {{#each movies as |movie|}}
     <div class="text-center add-to-watchlist">
     <p>{{movie.movie_id}}</p>
+      <button class="btn btn-sm btn-danger" data-id="{{movie.movie_id.id}}">X</button>
+      <form class= "form-inline emailLink">
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Keep me Updated</button>
+      </div>
+      </form>
+      
     </div>
     {{/each}}
 

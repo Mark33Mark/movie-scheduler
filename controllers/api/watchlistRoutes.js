@@ -1,12 +1,18 @@
 const router = require('express').Router();
-const { Watchlist } = require('../../models');
+const { UserMovie, User } = require('../../models');
 
 //Route to create new watchlist entry
 router.post('/', async (req, res) => {
   try {
-    const watchlistEntry = await Watchlist.create({
+    const watchlistEntry = await UserMovie.create({
       ...req.body,
       user_id: req.session.user_id,
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
     });
 
     res.status(200).json(watchlistEntry);
@@ -15,7 +21,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-//route to get a Watchlist
+//route to get a Watchlist entry
 router.get('/:id', async (req, res) => {
   try {
     const WatchlistData = await Watchlist.findByPk(req.params.id, {
@@ -32,7 +38,7 @@ router.get('/:id', async (req, res) => {
     });
 
     if (!WatchlistData) {
-      res.status(404).json({ message: 'No Watchlist found with this id!' });
+      res.status(404).json({ message: 'No Watchlist entry found with this id!' });
       return;
     }
 
