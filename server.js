@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 8888;
 const hbs = exphbs.create({ helpers });
 
 const sess = {
-  secret:  process.env.SESSION_SECRET,
+  secret:  "my-secret",
   cookie: {},
   resave: false,
   saveUninitialized: true,
@@ -30,6 +30,7 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use(routes);
 

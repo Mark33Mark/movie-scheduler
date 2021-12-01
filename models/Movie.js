@@ -1,23 +1,15 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Upcoming extends Model {}
+class Movie extends Model {}
 
-Upcoming.init(
+Movie.init(
 {
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true,
-    },
-
-    genre_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'genre',
-            key: 'id',
-        },
     },
 
     tmdb_movie_id: {
@@ -43,7 +35,7 @@ Upcoming.init(
     },
 
     popularity: {
-        type: DataTypes.DECIMAL(5, 3),
+        type: DataTypes.DECIMAL(8, 3),
     },
 
     poster_path: {
@@ -59,8 +51,8 @@ Upcoming.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'upcoming',
+    modelName: 'movie',
     }
 );
 
-module.exports = Upcoming;
+module.exports = Movie;

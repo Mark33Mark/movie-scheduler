@@ -1,6 +1,5 @@
 [
   {
-    "genre_id": [18],
     "tmdb_movie_id": 820705,
     "title": "The Hill Where Lionesses Roar",
     "release_date": "2021-08-08",
@@ -11,7 +10,6 @@
     "backdrop_path": "/xxxH8vJaCfDoLCj2FbqGm3QE3OM.jpg"
   },
   {
-    "genre_id": [35, 27, 53, 9648],
     "tmdb_movie_id": 723377,
     "title": "The Scary of Sixty-First",
     "release_date": "2021-08-13",
@@ -22,7 +20,6 @@
     "backdrop_path": "/5pWm1enf9ULB37LYqMPo4d5AjXW.jpg"
   },
   {
-    "genre_id": [18, 37, 53],
     "tmdb_movie_id": 722800,
     "title": "The Drover's Wife: The Legend of Molly Johnson",
     "release_date": "2022-05-05",
@@ -33,7 +30,6 @@
     "backdrop_path": "/eGfLnC1Gd8We6HvCwF1oJ5ZQL8V.jpg"
   },
   {
-    "genre_id": [99],
     "tmdb_movie_id": 661348,
     "title": "Cow",
     "release_date": "2021-08-15",
@@ -44,7 +40,6 @@
     "backdrop_path": "/kCF4tIyvLN9BieEUzUOVFwgGUPM.jpg"
   },
   {
-    "genre_id": [18],
     "tmdb_movie_id": 633949,
     "title": "Memory Box",
     "release_date": "2021-08-15",
@@ -55,7 +50,6 @@
     "backdrop_path": "/yIHGH3ZolIh2Bp1Lznt0qJhqvya.jpg"
   },
   {
-    "genre_id": [99],
     "tmdb_movie_id": 836486,
     "title": "JFK Revisited: Through The Looking Glass",
     "release_date": "2021-08-16",
@@ -66,7 +60,6 @@
     "backdrop_path": "/zN1uM7KYMpHI8UuLuqDshq421tp.jpg"
   },
   {
-    "genre_id": [18, 53],
     "tmdb_movie_id": 672208,
     "title": "A Hero",
     "release_date": "2021-08-16",
@@ -77,7 +70,6 @@
     "backdrop_path": "/rXRf5Okqg0FzDpmZkt4wly2asB2.jpg"
   },
   {
-    "genre_id": [18],
     "tmdb_movie_id": 807070,
     "title": "Vortex",
     "release_date": "2021-10-23",
@@ -88,7 +80,6 @@
     "backdrop_path": "/gLoTcDELdmN0XB69XThqs6sfpLo.jpg"
   },
   {
-    "genre_id": [27],
     "tmdb_movie_id": 660001,
     "title": "Dead & Beautiful",
     "release_date": "2021-11-04",
@@ -99,7 +90,6 @@
     "backdrop_path": "/t3vYOq09cLngAedVKn3Bbo6WMlR.jpg"
   },
   {
-    "genre_id": [18],
     "tmdb_movie_id": 821494,
     "title": "Last Film Show",
     "release_date": "2021-11-05",
@@ -110,7 +100,6 @@
     "backdrop_path": "/Cyp0RzB7gQBMMfYN0XxWsEve3G.jpg"
   },
   {
-    "genre_id": [53, 9648],
     "tmdb_movie_id": 896293,
     "title": "Stranger",
     "release_date": "2021-11-24",
@@ -121,7 +110,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [99, 18],
     "tmdb_movie_id": 896291,
     "title": "Dear Mum and Dad",
     "release_date": "2021-11-24",
@@ -132,7 +120,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [18, 80, 53],
     "tmdb_movie_id": 644495,
     "title": "House of Gucci",
     "release_date": "2021-11-25",
@@ -143,7 +130,6 @@
     "backdrop_path": "/oAy3GHA5EkUojSBt2WfWrvUvzXE.jpg"
   },
   {
-    "genre_id": [12, 10751, 14],
     "tmdb_movie_id": 615666,
     "title": "A Boy Called Christmas",
     "release_date": "2021-11-25",
@@ -154,7 +140,6 @@
     "backdrop_path": "/3nUsMuAknJQFIGERcah9Eh443AF.jpg"
   },
   {
-    "genre_id": [27, 28, 878],
     "tmdb_movie_id": 460458,
     "title": "Resident Evil: Welcome to Raccoon City",
     "release_date": "2021-11-25",
@@ -165,7 +150,6 @@
     "backdrop_path": "/zaY1FoAc39lHWaA6jUF93t95D7O.jpg"
   },
   {
-    "genre_id": [27, 53, 9648, 878],
     "tmdb_movie_id": 665032,
     "title": "The Knife",
     "release_date": "2021-11-26",
@@ -176,7 +160,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [],
     "tmdb_movie_id": 890634,
     "title": "Fireworks",
     "release_date": "2021-11-28",
@@ -187,7 +170,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [],
     "tmdb_movie_id": 890630,
     "title": "Be Careful With Me",
     "release_date": "2021-11-28",
@@ -198,7 +180,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [18],
     "tmdb_movie_id": 901551,
     "title": "september melancholy",
     "release_date": "2021-12-01",
@@ -209,7 +190,6 @@
     "backdrop_path": "/dzJdDa3V7xisoDqP3kiQZZLnAka.jpg"
   },
   {
-    "genre_id": [10749, 35],
     "tmdb_movie_id": 899235,
     "title": "Christmas on the Farm",
     "release_date": "2021-12-01",
@@ -220,7 +200,6 @@
     "backdrop_path": "/zjR6121KEPiQ5i3bpI7cMf0OdvV.jpg"
   },
   {
-    "genre_id": [99],
     "tmdb_movie_id": 860309,
     "title": "The Spaghetti Stains",
     "release_date": "2021-12-01",
@@ -231,7 +210,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [12, 16, 35, 10751, 14, 10402],
     "tmdb_movie_id": 568124,
     "title": "Encanto",
     "release_date": "2021-12-02",
@@ -242,7 +220,6 @@
     "backdrop_path": "/5i3ghCXVLNhewrBjTesMgy4FHT7.jpg"
   },
   {
-    "genre_id": [16, 35, 10751],
     "tmdb_movie_id": 774741,
     "title": "Diary of a Wimpy Kid",
     "release_date": "2021-12-03",
@@ -253,7 +230,6 @@
     "backdrop_path": "/hbCau5jcxQ3mblwSW3EsNdQuYpy.jpg"
   },
   {
-    "genre_id": [99],
     "tmdb_movie_id": 893084,
     "title": "The Tunnel: The Other Side of Darkness",
     "release_date": "2021-12-05",
@@ -264,7 +240,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [36, 18, 10752],
     "tmdb_movie_id": 873364,
     "title": "The Passion of Napoleon Bonaparte",
     "release_date": "2021-12-09",
@@ -275,7 +250,6 @@
     "backdrop_path": "/aAWa18SZXRdWKr0CmeSatpkdlGl.jpg"
   },
   {
-    "genre_id": [27],
     "tmdb_movie_id": 584147,
     "title": "Apparitions",
     "release_date": "2021-12-11",
@@ -286,7 +260,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [28, 12, 878],
     "tmdb_movie_id": 634649,
     "title": "Spider-Man: No Way Home",
     "release_date": "2021-12-16",
@@ -297,7 +270,6 @@
     "backdrop_path": "/vIPIyTJqcgOKgKcExCvTDpLpTYW.jpg"
   },
   {
-    "genre_id": [18, 36, 10752],
     "tmdb_movie_id": 399178,
     "title": "Benediction",
     "release_date": "2021-12-23",
@@ -308,7 +280,6 @@
     "backdrop_path": "/vgssRsGoCq8AQnlcs8Sow8noj43.jpg"
   },
   {
-    "genre_id": [35, 18, 878],
     "tmdb_movie_id": 646380,
     "title": "Don't Look Up",
     "release_date": "2021-12-24",
@@ -319,7 +290,6 @@
     "backdrop_path": "/abG9ldrNqSEoguBsi9hmnjusJ0.jpg"
   },
   {
-    "genre_id": [18, 35],
     "tmdb_movie_id": 718032,
     "title": "Licorice Pizza",
     "release_date": "2021-12-26",
@@ -330,7 +300,6 @@
     "backdrop_path": "/9tPV2VnrikL8LPcKnnGODU9P9Ma.jpg"
   },
   {
-    "genre_id": [18, 10752],
     "tmdb_movie_id": 591538,
     "title": "The Tragedy of Macbeth",
     "release_date": "2021-12-26",
@@ -341,7 +310,6 @@
     "backdrop_path": "/lMjY6kMBOHhloz2Ul16fLJn8xuw.jpg"
   },
   {
-    "genre_id": [18, 10749, 80],
     "tmdb_movie_id": 511809,
     "title": "West Side Story",
     "release_date": "2021-12-26",
@@ -352,7 +320,6 @@
     "backdrop_path": "/r4VQbiydjDH7ULo1HWjkkrNt3da.jpg"
   },
   {
-    "genre_id": [],
     "tmdb_movie_id": 894686,
     "title": "How to Please a Woman",
     "release_date": "2021-12-27",
@@ -363,7 +330,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [18, 14, 10751],
     "tmdb_movie_id": 895588,
     "title": "Life",
     "release_date": "2021-12-30",
@@ -374,7 +340,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [18, 35, 10749],
     "tmdb_movie_id": 874742,
     "title": "Friends of Mine",
     "release_date": "2021-12-31",
@@ -385,7 +350,6 @@
     "backdrop_path": "/24fF1s4Pp4evPP7tyDHsmPwTCcr.jpg"
   },
   {
-    "genre_id": [10749, 9648, 53],
     "tmdb_movie_id": 413453,
     "title": "Malibu Road",
     "release_date": "2021-12-31",
@@ -396,7 +360,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [27, 53],
     "tmdb_movie_id": 730167,
     "title": "The Reef: Stalked",
     "release_date": "2022-01-06",
@@ -407,7 +370,6 @@
     "backdrop_path": "/fsVWZQzG8ayJyCR4i0Uw8mVLqzo.jpg"
   },
   {
-    "genre_id": [28, 53],
     "tmdb_movie_id": 522016,
     "title": "The 355",
     "release_date": "2022-01-06",
@@ -418,7 +380,6 @@
     "backdrop_path": "/oSNqhngemquRBzxKSC3ysAmnC5e.jpg"
   },
   {
-    "genre_id": [10752, 28, 53, 12],
     "tmdb_movie_id": 476669,
     "title": "The King's Man",
     "release_date": "2022-01-06",
@@ -429,7 +390,6 @@
     "backdrop_path": "/4OTYefcAlaShn6TGVK33UxLW9R7.jpg"
   },
   {
-    "genre_id": [18, 10749],
     "tmdb_movie_id": 730047,
     "title": "Cyrano",
     "release_date": "2022-01-13",
@@ -440,7 +400,6 @@
     "backdrop_path": "/bFQC5FRFp8CCCWIg4HYySIny62e.jpg"
   },
   {
-    "genre_id": [27, 9648],
     "tmdb_movie_id": 646385,
     "title": "Scream",
     "release_date": "2022-01-13",
@@ -451,7 +410,6 @@
     "backdrop_path": "/nX1iuR24effBtWwkWsD8NjKD4Bz.jpg"
   },
   {
-    "genre_id": [53, 10749, 18],
     "tmdb_movie_id": 619979,
     "title": "Deep Water",
     "release_date": "2022-01-13",
@@ -462,7 +420,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [27],
     "tmdb_movie_id": 756999,
     "title": "The Black Phone",
     "release_date": "2022-01-27",
@@ -473,7 +430,6 @@
     "backdrop_path": "/i1S9VYRSsO0FA5fTDjxfIATYzHw.jpg"
   },
   {
-    "genre_id": [99, 35, 28],
     "tmdb_movie_id": 656663,
     "title": "Jackass Forever",
     "release_date": "2022-02-01",
@@ -484,7 +440,6 @@
     "backdrop_path": "/56T4lCXrWCFhCeZxArSOXPQIfKc.jpg"
   },
   {
-    "genre_id": [878, 28, 12],
     "tmdb_movie_id": 406759,
     "title": "Moonfall",
     "release_date": "2022-02-03",
@@ -495,7 +450,6 @@
     "backdrop_path": "/qjJ2fQULgZB9JWUhf85LWUMW7bl.jpg"
   },
   {
-    "genre_id": [99],
     "tmdb_movie_id": 891743,
     "title": "Facing Monsters",
     "release_date": "2022-02-10",
@@ -506,7 +460,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [35, 10749, 10402],
     "tmdb_movie_id": 615904,
     "title": "Marry Me",
     "release_date": "2022-02-10",
@@ -517,7 +470,6 @@
     "backdrop_path": "/cFopxtSuj0JrXIxk78FJGVihPlX.jpg"
   },
   {
-    "genre_id": [18],
     "tmdb_movie_id": 776541,
     "title": "Hive",
     "release_date": "2022-02-17",
@@ -528,7 +480,6 @@
     "backdrop_path": "/cgIGURIOQR7ShunevzrGllcTXWk.jpg"
   },
   {
-    "genre_id": [28, 80, 53],
     "tmdb_movie_id": 763285,
     "title": "Ambulance",
     "release_date": "2022-02-17",
@@ -539,7 +490,6 @@
     "backdrop_path": "/dNj8UsgfKndTFUV7xvNijilQHQZ.jpg"
   },
   {
-    "genre_id": [18, 10751, 35],
     "tmdb_movie_id": 626735,
     "title": "Dog",
     "release_date": "2022-02-17",
@@ -550,7 +500,6 @@
     "backdrop_path": "/e5OZCzHn9tSaBlJapGytx0unRXC.jpg"
   },
   {
-    "genre_id": [28, 12],
     "tmdb_movie_id": 335787,
     "title": "Uncharted",
     "release_date": "2022-02-17",
@@ -561,7 +510,6 @@
     "backdrop_path": "/cMC2akwLDkymydZU53ItCA7hOA5.jpg"
   },
   {
-    "genre_id": [28, 80, 18],
     "tmdb_movie_id": 414906,
     "title": "The Batman",
     "release_date": "2022-03-03",
@@ -572,7 +520,6 @@
     "backdrop_path": "/tRS6jvPM9qPrrnx2KRp3ew96Yot.jpg"
   },
   {
-    "genre_id": [10402],
     "tmdb_movie_id": 892317,
     "title": "Butterfly 3000: Ocular Edition",
     "release_date": "2022-03-11",
@@ -583,7 +530,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [18],
     "tmdb_movie_id": 820446,
     "title": "Downton Abbey: A New Era",
     "release_date": "2022-03-17",
@@ -594,7 +540,6 @@
     "backdrop_path": "/2m7OIXwTOMuHGIWm780Dqjp9uRh.jpg"
   },
   {
-    "genre_id": [53, 28, 35],
     "tmdb_movie_id": 876856,
     "title": "Frog-Induced Insomnia",
     "release_date": "2022-03-31",
@@ -605,7 +550,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [10751, 878, 35, 28],
     "tmdb_movie_id": 675353,
     "title": "Sonic the Hedgehog 2",
     "release_date": "2022-04-08",
@@ -616,7 +560,6 @@
     "backdrop_path": "/wnUsZKxtS8gSl7xIEif97zIwi3b.jpg"
   },
   {
-    "genre_id": [18],
     "tmdb_movie_id": 698948,
     "title": "Thirteen Lives",
     "release_date": "2022-04-14",
@@ -627,7 +570,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [28, 18],
     "tmdb_movie_id": 361743,
     "title": "Top Gun: Maverick",
     "release_date": "2022-05-01",
@@ -638,7 +580,6 @@
     "backdrop_path": "/odJ4hx6g6vBt4lBWKFD1tI8WS4x.jpg"
   },
   {
-    "genre_id": [16, 12, 10751, 35],
     "tmdb_movie_id": 539681,
     "title": "DC League of Super-Pets",
     "release_date": "2022-05-19",
@@ -649,7 +590,6 @@
     "backdrop_path": "/9FQmThEGHHwWYjY4U15oTqJgLHv.jpg"
   },
   {
-    "genre_id": [28, 80, 53],
     "tmdb_movie_id": 603692,
     "title": "John Wick: Chapter 4 - Hagakure",
     "release_date": "2022-05-26",
@@ -660,7 +600,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [16, 12, 14, 878],
     "tmdb_movie_id": 718789,
     "title": "Lightyear",
     "release_date": "2022-06-16",
@@ -671,7 +610,6 @@
     "backdrop_path": "/ce7o5nkpZD6Dp5luLnSKMSUjatl.jpg"
   },
   {
-    "genre_id": [10751, 16, 28, 12, 35],
     "tmdb_movie_id": 438148,
     "title": "Minions: The Rise of Gru",
     "release_date": "2022-06-30",
@@ -682,7 +620,6 @@
     "backdrop_path": "/ggEKIzP5An3vnSfj271ApaJYtQw.jpg"
   },
   {
-    "genre_id": [10749, 18],
     "tmdb_movie_id": 893034,
     "title": "Saturday Night Malady",
     "release_date": "2022-07-13",
@@ -693,7 +630,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [27, 53],
     "tmdb_movie_id": 762504,
     "title": "Nope",
     "release_date": "2022-07-21",
@@ -704,7 +640,6 @@
     "backdrop_path": "/pXAjMA96PTub16QKsqhLiwpAFBL.jpg"
   },
   {
-    "genre_id": [28, 14, 12],
     "tmdb_movie_id": 436270,
     "title": "Black Adam",
     "release_date": "2022-07-29",
@@ -715,7 +650,6 @@
     "backdrop_path": "/e84hWiHvyL5GkH5HBn8lkAfjehr.jpg"
   },
   {
-    "genre_id": [10751, 14],
     "tmdb_movie_id": 791155,
     "title": "Secret Headquarters",
     "release_date": "2022-09-01",
@@ -726,7 +660,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [28, 10749, 53],
     "tmdb_movie_id": 747767,
     "title": "Wicked Game",
     "release_date": "2022-09-22",
@@ -737,7 +670,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [16, 28, 878, 35, 12],
     "tmdb_movie_id": 569094,
     "title": "Spider-Man: Across the Spider-Verse",
     "release_date": "2022-10-07",
@@ -748,7 +680,6 @@
     "backdrop_path": "/n3tyH0YZ2QUHxj0HnwjX1fR1QkF.jpg"
   },
   {
-    "genre_id": [27, 53],
     "tmdb_movie_id": 853958,
     "title": "Transform",
     "release_date": "2022-12-09",
@@ -759,7 +690,6 @@
     "backdrop_path": null
   },
   {
-    "genre_id": [28, 12, 878, 14],
     "tmdb_movie_id": 76600,
     "title": "Avatar 2",
     "release_date": "2022-12-15",
