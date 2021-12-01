@@ -16,10 +16,11 @@
 
 
 module.exports = {
-
-  format_date: (date) => {
+  // format for the parsed data:
+  // new Date(year, month, day, hours, minutes, seconds, milliseconds);
+  format_date: ( date ) => {
     
-    const d = new Date(date);
+    const d = new Date( date );
     let month_name = month[d.getMonth()];
 
     return `${new Date(date).getDate()}-${month_name}-${new Date(date).getFullYear()}`;
