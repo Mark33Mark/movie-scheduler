@@ -38,13 +38,31 @@
   <!-- ================================================ --> 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
+      <header class="display-flex justify-space-between align-center p-2">
 
         <div class="logo-container">
             <a href="#"><img class="logo" src="./img/FlickedLogo.png" /></a>
         </div>
 
       </header>
+
+        <nav>
+          <div class="pb-3 text-dark" >
+            <a href="/" >home</a>
+            <span class="divider">|</span> 
+            <a href="/dashboard" >dashboard</a>
+            <span class="divider">|</span> 
+            <!-- Conditionally render login or logout links -->
+            {{#if logged_in}}
+            <a href="logout"><span id="log-out">logout</span></a>
+            {{else}}
+            <a href="/login">login</a>
+            <span class="divider">|</span> 
+            <a href="/join">join</a>
+            {{/if}}
+          </div>
+        </nav> 
+
   </div>
 
   <div class="stage">
