@@ -19,7 +19,8 @@ module.exports = {
   // format for the parsed data:
   // new Date(year, month, day, hours, minutes, seconds, milliseconds);
   format_date: ( date ) => {
-    
+    formattedDate = date.replace("-",",");
+
     const d = new Date( date );
     let month_name = month[d.getMonth()];
 
