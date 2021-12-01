@@ -21,6 +21,10 @@
   html, body, .stage {
     overflow:hidden;
   }
+
+  nav{
+    z-index:10;
+  }
   
   div, svg {
     position: absolute;
