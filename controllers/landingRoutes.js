@@ -19,7 +19,6 @@ router.get('/', async (req, res) => {
 
     const movieInfo = movies.map(( info ) => info.get({ plain: true }) );
     const posterCount = movieInfo.length;
-    console.log(movieInfo);
 
     res.render('landing', { 
         movieInfo, 

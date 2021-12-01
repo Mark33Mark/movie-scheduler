@@ -1,22 +1,27 @@
 
 
     {{#each movieInfo as |movie|}}
-
+        
         <div class="img">
             {{#if movie.poster_path}}
             <a href="#">
                 <img src = "https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" height="600px" width="400px"/> 
-                
+                <p class="poster_counter" style="font-size: 2rem;">{{movie.id}}.</p>
             </a>
             {{else}}
             <a href="#">
                 <img src = "./img/PlaceHolder.jpg" alt="" height="600px" width="400px"/> 
+                <p class="poster_counter" style="font-size: 2rem;">{{movie.id}}.</p>
             </a>
-            {{!-- <h2>{{movieName}}</h2>
-            <p>{{releaseDate}}</p> <!-- maybe add days until release date? -->
-            <p>{{description}}</p> --}}
             {{/if}}
+
+            <div class="movie-info">
+                <p class="title">{{movie.title}}</p>
+                <p class="release">{{format_date movie.release_date}}</p>               
+            </div>
         </div>
+
+
 
     {{/each}}
 
