@@ -77,6 +77,25 @@
     </div>
   </div>
 
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/profile">profile</a>
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+    </header>
+</div>
+    <main>
+      <!-- Render the sub layout -->
+      {{{body}}}
+    </main>
+
+    <footer>
+    </footer>
+
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
