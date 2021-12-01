@@ -27,6 +27,10 @@
 
 ---
 ### 1. Description  
+
+**User Story**  
+* As a user, I want to see a list of upcoming movies to be released and view saved movies
+
 **What is this project?**  
 * An application for users to join and receive information new release movies including their release date.  
 
