@@ -3,8 +3,10 @@ const router = require( "express" ).Router();
 
 const apiRoutes = require( "./api");
 const landingRoutes = require( "./landingRoutes" );
-
+const searchRoutes=require("./searchRoutes");
 router.use('/', landingRoutes);
+//
+router.use('/search-movie',searchRoutes);
 
 
 

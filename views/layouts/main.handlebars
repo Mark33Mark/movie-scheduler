@@ -40,17 +40,20 @@
   <div class="flex-column justify-space-around">
       <header class="display-flex justify-space-between align-center p-2">
 
-        <div class="logo-container">
+        {{!-- <div class="logo-container">
             <a href="#"><img class="logo" src="./img/FlickedLogo.png" /></a>
-        </div>
+        </div> --}}
 
       </header>
 
         <nav>
           <div class="pb-3 text-white" >
+            <div>
+            {{!-- search fucntion --}}
+            <a href="/search-movie" >Search a movie</a>
             <a href="/" >home</a>
             <span class="divider">|</span> 
-            <a href="/dashboard" >dashboard</a>
+            <a href="/dashboard" >Dashboard</a>
             <span class="divider">|</span> 
             <!-- Conditionally render login or logout links -->
             {{#if logged_in}}
