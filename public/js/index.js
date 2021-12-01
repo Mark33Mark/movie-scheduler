@@ -57,7 +57,6 @@ switch( true ){
         imgAdj = 5.3;
         break;
     case ( posters<=70 ):
-        console.log("you got here")
         imgConfig = 5300;
         imgAdj = 5.151;
         break;
@@ -74,7 +73,7 @@ switch( true ){
         imgAdj = 5;
         break;
     default:
-        alert(" There are no posters to render to the page? ")
+        alert(" There are no posters to render to the page? ");
 }
 
 let xPos = 0;
