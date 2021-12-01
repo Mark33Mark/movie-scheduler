@@ -42,7 +42,7 @@ switch( true ){
         break;
     case ( posters<=50 ):
         imgConfig = 3500;
-        imgAdj = 7.2;
+        imgAdj = 7.65;
         break;
     case ( posters<=55 ):
         imgConfig = 4000;

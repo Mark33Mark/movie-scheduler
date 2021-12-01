@@ -13,13 +13,13 @@
     },
     {
       "user_id": 3,
-      "movie_id": 60,
+      "movie_id": 25,
       "notified": false,
       "notification_period": "3 days"
     },
     {
       "user_id": 2,
-      "movie_id": 56,
+      "movie_id": 2,
       "notified": false,
       "notification_period": "3 days"
     }  
