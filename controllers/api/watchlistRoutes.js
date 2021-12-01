@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
 });
 
 //route to get a Watchlist entry
-router.get('/:id', async (req, res) => {
+/*router.get('/:id', async (req, res) => {
   try {
     const WatchlistData = await Watchlist.findByPk(req.params.id, {
       where: {
@@ -46,9 +46,9 @@ router.get('/:id', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-});
+});*/
 
-//route to delete Watchlist, link up to delete button
+//route to delete Watchlist entry, link up to delete button
 router.delete('/:id', async (req, res) => {
   try {
     const WatchlistData = await Watchlist.destroy({

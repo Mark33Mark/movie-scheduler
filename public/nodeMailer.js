@@ -1,7 +1,7 @@
 const { response } = require('express');
 const nodemailer = require('nodemailer');
 const hbs = require('nodemailer-express-handlebars');
-const { Watchlist } = require('../models');
+const { UserMovie } = require('../models');
 const { User } = require('../models');
 //const emailTemplate = require('../views/emailContent.handlebars')
 
@@ -37,7 +37,7 @@ transporter.use('compile', hbs(options));
     }
   };
 
-transporter.sendMail(mailOptions, function(error, info){
+let send = transporter.sendMail(mailOptions, function(error, info){
   if (error) {
     console.log(error);
   } else {
