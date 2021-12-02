@@ -5,39 +5,43 @@ const Movie         = require('./Movie');
 const User          = require('./User');
 const UserMovie     = require('./UserMovie');
 
-// Model relationships.
-Movie.belongsToMany( User, {
-    through: {
-        model: UserMovie,
-        unique: false
-    },
-    as: 'user_watches'
-});
-
 User.belongsToMany( Movie, {
     through: {
         model: UserMovie,
-        unique: false
+        unique: false,
+        as: 'user_movies',
     },
-    as: 'movie_watch'
 });
-
 
 Genre.belongsToMany( Movie, {
     through: {
         model: GenreMovie,
-        unique: false
+        unique: false,
+        as: 'movie_genres',
     },
-    as: 'movie_genres'
+});
+
+Movie.belongsToMany( User, {
+    through: {
+        model: UserMovie,
+        unique: false,
+        as: 'movies_user',
+    },
 });
 
 Movie.belongsToMany(Genre, {
     through: {
         model: GenreMovie,
-        unique: false
+        unique: false,
+        as: 'genres_movies',
     },
-    as: 'genres_movies'
 });
+
+// User.hasMany(Movie);
+// Genre.hasMany(Movie);
+// Movie.hasMany(Genre);
+// Movie.hasMany(User);
+
 
 
 module.exports = { User, Genre, GenreMovie, Movie, UserMovie };
