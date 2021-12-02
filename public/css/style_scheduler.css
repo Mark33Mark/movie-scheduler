@@ -10,8 +10,6 @@
     --border-radius: 0.3rem;
   }
 
-
-
   html {
     font-family: system-ui;
     /* background: #3d76d9; */
@@ -129,4 +127,14 @@ nav {
 .movie-overview{
   color: whitesmoke
 }
+
+.release-date{
+  color:whitesmoke;
+  padding: 0;
+}
+
+.user-pref{
+  background-color: rgb(175, 175, 175);
+}
+
 

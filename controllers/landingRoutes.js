@@ -46,7 +46,7 @@ router.get('/', async (req, res) => {
 });
 
 
-router.get('/dashboard', /*withAuth,*/ async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
     try {
         const userData = await User.findAll({
         where: 
@@ -63,11 +63,7 @@ router.get('/dashboard', /*withAuth,*/ async (req, res) => {
             ],
         });
 
-        let user = userData.map(( post ) => post.get({ plain: true }));
-        console.log(user[0].name);
-        console.log(user[0].movies[0]);
-        console.log(user[0].movies[1]);
-        
+        let user = userData.map(( post ) => post.get({ plain: true }));        
 
         res.render( "watchlist", { 
         user, 
