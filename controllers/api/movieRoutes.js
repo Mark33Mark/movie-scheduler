@@ -5,7 +5,7 @@ const withAuth = require('../../utilities/auth');
 
 
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
 
   const movieID = req.url.replace("/","");
 
@@ -17,6 +17,14 @@ router.get('/:id', async (req, res) => {
         },
         include: 
         [
+                      {
+              model:UserMovie,
+
+              attributes:
+              [
+                  "notified", "notification_period"
+              ]
+            },
             {
                 model: Genre,
                 attributes:['genre_name'],

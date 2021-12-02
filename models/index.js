@@ -9,15 +9,27 @@ User.belongsToMany( Movie, {
     through: {
         model: UserMovie,
         unique: false,
-        as: 'user_movies',
+        // as: 'user_movies',
     },
+});
+
+UserMovie.belongsTo( Movie );
+
+UserMovie.belongsTo( User );
+
+User.hasMany( UserMovie, {
+    foreignKey: 'user_id',
+});
+
+Movie.hasMany( UserMovie, {
+    foreignKey: 'movie_id',
 });
 
 Genre.belongsToMany( Movie, {
     through: {
         model: GenreMovie,
         unique: false,
-        as: 'movie_genres',
+        // as: 'movie_genres',
     },
 });
 
@@ -25,7 +37,7 @@ Movie.belongsToMany( User, {
     through: {
         model: UserMovie,
         unique: false,
-        as: 'movies_user',
+        // as: 'movies_user',
     },
 });
 
@@ -33,7 +45,7 @@ Movie.belongsToMany(Genre, {
     through: {
         model: GenreMovie,
         unique: false,
-        as: 'genres_movies',
+        // as: 'genres_movies',
     },
 });
 

@@ -9,18 +9,18 @@
       "user_id": 2,
       "movie_id": 10,
       "notified": true,
-      "notification_period": "3 days"
+      "notification_period": "2 days"
     },
     {
       "user_id": 3,
       "movie_id": 25,
       "notified": false,
-      "notification_period": "3 days"
+      "notification_period":null
     },
     {
       "user_id": 2,
       "movie_id": 2,
       "notified": false,
-      "notification_period": "3 days"
+      "notification_period":null
     }  
   ]
