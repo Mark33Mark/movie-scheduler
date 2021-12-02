@@ -9,82 +9,28 @@
     --error: rgb(228, 46, 1);
     --border-radius: 0.3rem;
   }
-  
 
-  html, body, .stage, .ring, .img {
-    width:100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    user-select:none;
-  }
-  
-  html, body, .stage {
-    overflow:hidden;
-  }
 
-  nav{
-    z-index:10;
-  }
-  
-  div, svg {
-    position: absolute;
-  }
-  
-  .poster-container {
-    perspective: 2000px;
-    width: 300px;
-    height: 400px;  
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-  }
 
 html {
   font-family: system-ui;
   /* background: #3d76d9; */
-  background: #f5a25d;
-  /* rgb(50, 50, 50); */
+  background: gray;
 }
 
 .logo-container{
-  padding-top:20rem;
   width:100vw;
 }
 
-#logo {
-  display:inline-block;
-margin: 0 auto;
+.logo {
+    margin: 0 35vw;
+    width:50%;
+    padding: 1rem 0;
+    max-width: 45rem;
+    /* filter: brightness(0.75); */
+    height: auto;
 }
 
-header {
-  padding: 30px;
-}
-#nav {
-  display:table; /* centers modern browsers */
-  margin:0 auto; /* centers modern browsers */
-  text-align:center; /* centers IE6/7 */
-  }
-#nav ul {
-list-style:none;
-display:inline-block; /* IE6/7 haslayout trip-switch */
-}
-
-
-#nav li {
-display:inline;
-}
-
-#nav a {
-text-decoration:none; 
-padding:0 30px; /* variable width */
-font-family: 'Raleway', sans-serif;
-color: cornflowerblue;
-}
-
-figure {
-      width:100%;
-text-align:center;
-  }
 .image-container{
     height: 35rem;  
 }
@@ -122,8 +68,16 @@ header {
   padding: 40px;
   text-align: center; 
   /* background: var(--primary); */
-  /* color: var(--secondary); */
+  color: white;
   border-bottom-style: solid;
+}
+
+.divider{
+  padding: 0 2rem;
+}
+
+.genres{
+  font-size: 1rem;
 }
   
 .no-button{
@@ -172,3 +126,46 @@ nav {
   align-items: center;
 }
 
+.film-roll{
+  position: absolute;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40rem;
+  height: 40rem;
+  background-image: url("../img/film_roll_png.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.film-roll-signup{
+  position: absolute;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40rem;
+  height: 55rem;
+  background-image: url("../img/film_roll_png.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.login-form{
+  margin-left: 5rem;
+  margin-top: 5.5rem;
+}
+
+.login-title{
+  margin-left: 6rem;
+  margin-top: 6rem;
+}
+
+.join-form{
+  margin-left: 5rem;
+  margin-top: 5.5rem;
+}
+
+.join-title{
+  margin-left: 6rem;
+  margin-top: 11.2rem;
+}

@@ -24,60 +24,27 @@
 
   <link type="text/css" rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link type="text/css" rel="stylesheet"  href="./css/jass.css">
-  <link type="text/css" rel="stylesheet" href="./css/style_dashboard.css"/>
+  <link type="text/css" rel="stylesheet" href="./css/style_signin.css"/>
   
 </head>
 
   <!-- ================================================ --> 
 
-<body>
+<body class="login">
   <div class="flex-column justify-space-around">
     
-    <div class="navbar">
-
       <header class="display-block justify-space-between align-center p-5">
-        <nav>
-          <div class="pb-3" >
-            <a href="/" >home</a>
-            <span class="divider">|</span> 
-
-            <!-- Conditionally render login or logout links -->
-            {{#if logged_in}}
-            <a href="logout"><span id="log-out">logout</span></a> |
-            <a href="/watchlist">Watchlist</a>
-            {{else}}
-            <a href="/login">login</a>
-            <span class="divider">|</span> 
-            <a href="/join">join</a>
-            {{/if}}
-          </div>
-        </nav> 
 
         <div class="logo-container">
-            <a href="#"><img class="logo" src="./img/FlickedLogo.png" />
+            <a href="/"><img class="logo" src="./img/FlickedLogo.png" /></a>
         </div>
 
-        <h1 class="text-white">
-          <a href="/dashboard">Dashboard</a>
-        </h1>
       </header>
 
-    </div>
-
-    <main class="container container-fluid mtop">
       <!-- Render the sub layout -->
+
       {{{ body }}}
-    </main>
-
     
-  </div>
-
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="./js/logout.js"></script>
-  {{/if}}
-
-
 
 </body>
 
