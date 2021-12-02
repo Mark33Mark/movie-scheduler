@@ -1,13 +1,11 @@
 const router = require('express').Router();
 
-
-// const userRoutes = require('./userRoutes');
+ const userRoutes = require('./userRoutes');
 // const projectRoutes = require('./projectRoutes');
-// const watchlistRoutes = require('./watchlistRoutes');
+ const watchlistRoutes = require('./watchlistRoutes');
 
-// router.use('/users', userRoutes);
-// router.use('/projects', projectRoutes);
-// router.use('/watchlists', watchlistRoutes);
+router.use('/users', userRoutes);
+router.use('/watchlist', watchlistRoutes);
 
 // const projectRoutes = require('./projectRoutes');
 
@@ -21,4 +19,4 @@ const router = require('express').Router();
 //     </h1>` ); 
 // });
 
-// module.exports = router;
+module.exports = router;

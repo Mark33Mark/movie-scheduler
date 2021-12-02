@@ -84,6 +84,18 @@ html {
   font-weight: 600;
 }
 
+form {
+  color: var(--secondary);
+}
+
+label {
+  float: left;
+}
+
+input {
+  width: 100%;
+}
+
 a { 
     text-decoration: none;
 }
@@ -101,7 +113,7 @@ header {
 }
   
 .no-button{
-  background-color: white;
+  background-color: rgba(148, 148, 148, 0);
   border: none;
   color: #1b89bc;
   padding: 16px 32px;
