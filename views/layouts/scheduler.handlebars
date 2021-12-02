@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flicked | new release movie scheduler</title>
 
-  <link rel="shortcut icon" href="img/favicon.ico?ver=1.0" type="image/x-icon" /> 
+  <link rel="shortcut icon" href="../../img/favicon.ico?ver=1.0" type="image/x-icon" /> 
 
   <!--- basic page needs and meta to boost SEO
   ================================================== -->
@@ -31,7 +31,7 @@
       <header class="display-flex justify-space-between align-center p-2">
 
         <div class="logo-container">
-            <a href="#"><img class="logo" src="../../img/FlickedLogo.png" /></a>
+            <a href="/"><img class="logo" src="../../img/FlickedLogo.png" /></a>
         </div>
 
       </header>
@@ -54,21 +54,17 @@
         </nav> 
   </div>
 
-  <div class="stage">
-    <div class="poster-container">
-      <div class="ring">
-    
+    <div >   
         {{{ body }}}
-
-      </div>
     </div>
-  </div>
+  
 
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="../../js/logout.js"></script>
   {{/if}}
+  <script src="../../js/watchlistPrefs.js"></script>
 
 
 </body>
