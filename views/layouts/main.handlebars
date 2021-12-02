@@ -22,48 +22,36 @@
   <link type="text/css" rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link type="text/css" rel="stylesheet"  href="./css/jass.css">
   <link type="text/css" rel="stylesheet" href="./css/style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poiret+One&family=Raleway&display=swap" rel="stylesheet">    
-
+  
 </head>
 
   <!-- ================================================ --> 
 <body>
-      <header>
-      <figure class="logo">
-        <a href="#"><img class="logo" src="./img/FlickedLogo.png" height="100px" width="150px"/></a>
-      </figure>
+  <div class="flex-column justify-space-around">
+      <header class="display-flex justify-space-between align-center p-2">
+
+        <div class="logo-container">
+            <a href="#"><img class="logo" src="./img/FlickedLogo.png" /></a>
+        </div>
 
       </header>
-    <nav>
-        <ul id="nav">
-            <li>
-              <a href="/search-movie" >Search a movie</a>
-            </li>
+
+        <nav>
+          <div class="pb-3 text-white" >
+            <a href="/" >home</a>
             <span class="divider">|</span> 
-            <li>
-              <a href="/" >home</a>
-            </li>
+            <a href="/dashboard" >dashboard</a>
             <span class="divider">|</span> 
-            <li>
-              <a href="/dashboard" >Dashboard</a>
-            </li>
-            <span class="divider">|</span> 
+            <!-- Conditionally render login or logout links -->
             {{#if logged_in}}
-            <li>
-              <a href="logout"><span id="log-out">logout</span></a>
-            </li>
-            <span class="divider">|</span> 
+            <a href="/logout"><span id="log-out">logout</span></a>
             {{else}}
-            <li>
-              <a href="/login">login</a>
-            </li>
+            <a href="/login">login</a>
             <span class="divider">|</span> 
-            <li>
-              <a href="/join">join</a>
-            </li>
+            <a href="/join">join</a>
             {{/if}}
-        </ul>
-      </nav>
+          </div>
+        </nav> 
   </div>
 
   <div class="stage">
