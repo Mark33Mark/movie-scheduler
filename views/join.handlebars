@@ -1,36 +1,35 @@
+<div class="row">
+  <div class="col-12">
 
-<div class="row justify-center">
-    <div class="col-md-6">
+    <form class="form join-form col-12 text-center">
+      <h2 class="font-weight-bold text-center">Signup</h2>
 
-    <div class = "card-banner card-rounded">
-        <div class="card-header display-flex justify-space-between align-center ">
-        <h2>Signup</h2>
+      <div class="form-group col-12">
+        <label for="name-signup">Name:</label>
+        <input class="form-control" type="text" id="name-signup" placeholder="name" />
+      </div>
+
+      <div class="form-group col-12">
+        <label for="email-signup">Email:</label>
+        <input class="form-control" type="password" id="email-signup" placeholder="email" />
+      </div>
+
+      <div class="form-group col-12">
+        <label for="password-signup">Password:</label>
+        <input class="form-control" type="password" id="password-signup" placeholder="password" />
+      </div>
+
+      <div class="form-group col-12 text-center">
+        <button class="btn btn-primary" type="submit">Sign up</button>
+      </div>
+
+    <div class="form-group col-12 align-items-center">
+      <a href="/login">
+        <div class="login-button"> Have an account? Log in here.</div>
+      </a>
+      </div>
+    </form>
+    </div>
     </div>
 
-    <div class="col-12">
-        <form class="form join-form">
-            <div class="form-group">
-                <label for="name-signup">name:</label>
-                <input class="form-input" type="text" id="name-signup" />
-            </div>
-            <div class="form-group">
-                <label for="email-signup">email:</label>
-                <input class="form-input" type="text" id="email-signup" />
-            </div>
-            <div class="form-group">
-                <label for="password-signup">password:</label>
-                <input class="form-input" type="password" id="password-signup" />
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary" type="submit">signup</button>
-            </div>
-            <div class="form-group"></div>
-                <a  href="/login">
-                    <div class="login-button">▶️ Already joined? Click here to log in. ◀️</div>
-                </a>
-            </div>
-        </form>
-    </div>
-</div>
-
-<script src="./js/join.js"></script>
+<script src="./js/login.js"></script>
