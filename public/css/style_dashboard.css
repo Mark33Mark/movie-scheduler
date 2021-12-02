@@ -9,35 +9,8 @@
     --error: rgb(228, 46, 1);
     --border-radius: 0.3rem;
   }
-  
 
-  html, body, .stage, .ring, .img {
-    width:100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    user-select:none;
-  }
-  
-  html, body, .stage {
-    overflow:hidden;
-  }
 
-  nav{
-    z-index:10;
-  }
-  
-  div, svg {
-    position: absolute;
-  }
-  
-  .poster-container {
-    perspective: 2000px;
-    width: 300px;
-    height: 400px;  
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-  }
 
 html {
   font-family: system-ui;
@@ -46,7 +19,6 @@ html {
 }
 
 .logo-container{
-  padding-top:20rem;
   width:100vw;
 }
 
@@ -96,8 +68,16 @@ header {
   padding: 40px;
   text-align: center; 
   /* background: var(--primary); */
-  /* color: var(--secondary); */
+  color: white;
   border-bottom-style: solid;
+}
+
+.divider{
+  padding: 0 2rem;
+}
+
+.genres{
+  font-size: 1rem;
 }
   
 .no-button{
