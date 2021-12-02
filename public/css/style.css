@@ -42,8 +42,7 @@
 html {
   font-family: system-ui;
   /* background: #3d76d9; */
-  background: #f5a25d;
-  /* rgb(50, 50, 50); */
+  background: rgb(50, 50, 50);
 }
 
 .logo-container{
@@ -51,40 +50,15 @@ html {
   width:100vw;
 }
 
-#logo {
-  display:inline-block;
-margin: 0 auto;
+.logo {
+    margin: 0 35vw;
+    width:50%;
+    padding: 1rem 0;
+    max-width: 45rem;
+    /* filter: brightness(0.75); */
+    height: auto;
 }
 
-header {
-  padding: 30px;
-}
-#nav {
-  display:table; /* centers modern browsers */
-  margin:0 auto; /* centers modern browsers */
-  text-align:center; /* centers IE6/7 */
-  }
-#nav ul {
-list-style:none;
-display:inline-block; /* IE6/7 haslayout trip-switch */
-}
-
-
-#nav li {
-display:inline;
-}
-
-#nav a {
-text-decoration:none; 
-padding:0 30px; /* variable width */
-font-family: 'Raleway', sans-serif;
-color: cornflowerblue;
-}
-
-figure {
-      width:100%;
-text-align:center;
-  }
 .image-container{
     height: 35rem;  
 }
