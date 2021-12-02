@@ -109,7 +109,7 @@ router.get('/dashboard', /*withAuth,*/ async (req, res) => {
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('/dashboard');
     return;
     }
 
@@ -123,7 +123,7 @@ router.get('/join', (req, res) => {
 
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
-      res.redirect('/dashboard');
+      res.redirect('/');
       return;
     }
   
@@ -135,6 +135,7 @@ router.get('/join', (req, res) => {
   });
 
   router.post('/logout', (req, res) => {
+      console.log("User wants to log out.");
     if (req.session.logged_in) {
       req.session.destroy(() => {
         res.status(204).end();

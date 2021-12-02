@@ -24,7 +24,7 @@
 
   <link type="text/css" rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link type="text/css" rel="stylesheet"  href="./css/jass.css">
-  <link type="text/css" rel="stylesheet" href="./css/style_dashboard.css"/>
+  <link type="text/css" rel="stylesheet" href="./css/style_scheduler.css"/>
   
 </head>
 
@@ -43,8 +43,12 @@
 
             <!-- Conditionally render login or logout links -->
             {{#if logged_in}}
+<<<<<<< HEAD
             <a href="logout"><span id="log-out">logout</span></a> |
             <a href="/watchlist">Watchlist</a>
+=======
+            <a href="/logout"><span id="log-out">logout</span></a>
+>>>>>>> main
             {{else}}
             <a href="/login">login</a>
             <span class="divider">|</span> 
