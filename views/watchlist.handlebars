@@ -1,17 +1,30 @@
-<div class="row mb-4">
-  <div class = "col-auto emailLink">
-    <h2>Watch List</h2>
-    <p>Start stocking up on popcorn, here are your upcoming movies</p>
+<div class="row">
+    <div class="col-auto display-block">
+
+            {{#each user as | users |}}
+                <h4 class="text-white">Welcome {{name}}</h4>
+
+
+            {{#each movies as | movie |}} 
+                <a href="/api/movie/{{ movie.usermovie.movie_id }}">
+                    <div class="card">
+                        <div class = "card-banner card-rounded">
+                            <div class="card-header display-flex justify-space-between align-center ">
+                                <h5 class="p-2">{{ movie.title }} <br />|
+                                    {{#each genres as | genre |}} 
+                                        <span class="genres">  {{ genre.genre_name }} | </span>    
+                                    {{/each}}
+                                </h5>
+                                <span class="card-poster">
+                                    <img src = "https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" height="90px" width="60px"/> 
+                                </span>   
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+            {{/each}}
+        {{/each}}
     </div>
-
-    {{#each movies as |movie|}}
-    <div class="text-center add-to-watchlist">
-    <img src = {{movieImage}}></img>
-    <h2>{{movieName}}</h2>
-    <p>{{releaseDate}}</p> <!-- maybe add days until release date? -->
-    <p>{{description}}</p>
-    </div>
-    {{/each}}
-
-
-  </div>
+    
+</div>
