@@ -3,14 +3,9 @@ const router = require( "express" ).Router();
 
 const apiRoutes = require( "./api");
 const landingRoutes = require( "./landingRoutes" );
-const searchRoutes=require("./searchRoutes");
+
+router.use('/api', apiRoutes);
 router.use('/', landingRoutes);
-//
-router.use('/search-movie',searchRoutes);
-
-
-
-// router.use('/api', apiRoutes);
 
 router.use(( req, res ) => { res.send( 
     `<h1 style="display: table-cell; width: 100vw; height: 100vh; vertical-align:middle; text-align:center;"> 
