@@ -1,0 +1,132 @@
+:root {
+    --primary: #389393;
+    /* --secondary: #f5a25d; */
+    --secondary: white;
+    --tertiary: #fa7f72;
+    --quatrinary: #6c6b67;
+    --light: #ebebeb;
+    --dark: #182c23;
+    --error: rgb(228, 46, 1);
+    --border-radius: 0.3rem;
+  }
+
+
+
+  html {
+    font-family: system-ui;
+    /* background: #3d76d9; */
+    background: rgb(50, 50, 50);
+  }
+
+.logo-container{
+  width:100vw;
+}
+
+.logo {
+    margin: 0 35vw;
+    width:50%;
+    padding: 1rem 0;
+    max-width: 45rem;
+    /* filter: brightness(0.75); */
+    height: auto;
+}
+
+.image-container{
+    height: 35rem;  
+}
+
+.movie-info > p {
+    bottom: 0;
+    width: 382px;
+    text-decoration: none;
+    padding: 0.3rem 0.5rem;
+    text-align: left;
+    overflow-y: auto;
+    color: black;
+    font-size: 3.5rem;
+    background: rgba(255,255,255,0.9);
+}
+
+.movie-info{
+  visibility: hidden;
+}
+
+.release{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+a { 
+    text-decoration: none;
+}
+
+.img:hover .movie-info {
+  visibility: visible;
+}
+
+header {
+  padding: 40px;
+  text-align: center; 
+  /* background: var(--primary); */
+  color: white;
+  border-bottom-style: solid;
+}
+
+.divider{
+  padding: 0 2rem;
+}
+
+.genres{
+  font-size: 1rem;
+}
+  
+.no-button{
+  background-color: white;
+  border: none;
+  color: #1b89bc;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.no-button:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+.project{
+  width: 60rem;
+  border-bottom: 0.25rem solid rgb(230, 230, 230);
+}
+
+.project-name>h2{
+  font-size: 1.6rem;
+}
+
+.funds-needed{
+  text-align: center;
+  background-color: rgb(210, 210, 150);
+}
+
+aside {
+  flex: 0;
+  background-color: var(--tertiary);
+  padding: 80px;
+  text-align: left;
+  color: var(--light);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.movie-overview{
+  color: whitesmoke
+}
+

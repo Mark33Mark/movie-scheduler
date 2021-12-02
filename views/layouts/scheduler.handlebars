@@ -1,0 +1,76 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flicked | new release movie scheduler</title>
+
+  <link rel="shortcut icon" href="img/favicon.ico?ver=1.0" type="image/x-icon" /> 
+
+  <!--- basic page needs and meta to boost SEO
+  ================================================== -->
+  <meta charset="utf-8">
+  <meta name="description" content="New release movie schedule" />  
+  <meta name="author" content="Konnen Hannaford, Zachary H, Mark Watson"  />
+  <meta name="KEYWORDS" content="front end web developer, front-end web developer, full stack developer, 
+                                social media, graphic design, analysis, database, 
+                                e-commerce, website, web design, web designer, grahic design  
+                                ui designer, ux designer, ui, ux, movies, new releases, 
+                                curriculum vitae web developer, resume web developer"  />
+  
+  <!-- CSS
+  ================================================== -->  
+
+  <link type="text/css" rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link type="text/css" rel="stylesheet"  href="../../css/jass.css">
+  <link type="text/css" rel="stylesheet" href="../../css/style_scheduler.css"/>
+  
+</head>
+
+  <!-- ================================================ --> 
+<body>
+  <div class="flex-column justify-space-around">
+      <header class="display-flex justify-space-between align-center p-2">
+
+        <div class="logo-container">
+            <a href="#"><img class="logo" src="../../img/FlickedLogo.png" /></a>
+        </div>
+
+      </header>
+
+        <nav>
+          <div class="pb-3 text-white" >
+            <a href="/" >home</a>
+            <span class="divider">|</span> 
+            <a href="/dashboard" >dashboard</a>
+            <span class="divider">|</span> 
+            <!-- Conditionally render login or logout links -->
+            {{#if logged_in}}
+            <a href="/logout"><span id="log-out">logout</span></a>
+            {{else}}
+            <a href="/login">login</a>
+            <span class="divider">|</span> 
+            <a href="/join">join</a>
+            {{/if}}
+          </div>
+        </nav> 
+  </div>
+
+  <div class="stage">
+    <div class="poster-container">
+      <div class="ring">
+    
+        {{{ body }}}
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="../../js/logout.js"></script>
+  {{/if}}
+
+
+</body>
+
+</html>
