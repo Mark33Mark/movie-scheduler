@@ -75,6 +75,14 @@ html {
     background: rgba(255,255,255,0.9);
 }
 
+.centered {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .movie-info{
   visibility: hidden;
 }
