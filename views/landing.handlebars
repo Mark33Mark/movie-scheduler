@@ -4,17 +4,17 @@
         
         <div class="img">
             {{#if movie.poster_path}}
-            <a href="#">
+            <a href="{{movie.id}}">
                 <img src = "https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" height="600px" width="400px"/> 
                 <p class="poster_counter" style="font-size: 2rem;">{{movie.id}}.</p>
             </a>
             {{else}}
-            <a href="#">
+            <a href="{{movie.id}}">
                 <img src = "./img/PlaceHolder.jpg" alt="" height="600px" width="400px"/> 
                 <p class="poster_counter" style="font-size: 2rem;">{{movie.id}}.</p>
             </a>
             {{/if}}
-
+        
             <div class="movie-info">
                 <p class="title">{{movie.title}}</p>
                 <p class="release">{{format_date movie.release_date}}</p>               

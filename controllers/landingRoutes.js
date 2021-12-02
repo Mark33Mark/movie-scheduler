@@ -37,7 +37,7 @@ router.get('/', async (req, res) => {
     res.render('landing', { 
         movieInfo, 
         posterCount,
-        // logged_in: req.session.logged_in 
+        logged_in: req.session.logged_in 
     });
 
     } catch (err) {
@@ -51,8 +51,7 @@ router.get('/dashboard', /*withAuth,*/ async (req, res) => {
         const userData = await User.findAll({
         where: 
         { 
-            // id:req.session.user_id, 
-            id:2,
+            id:req.session.user_id, 
         },
             include: 
             [
@@ -73,7 +72,7 @@ router.get('/dashboard', /*withAuth,*/ async (req, res) => {
         res.render( "watchlist", { 
         user, 
         layout: "dashboard",
-        // logged_in: req.session.logged_in,
+        logged_in: req.session.logged_in,
         });
 
     } catch (err) {
@@ -82,17 +81,42 @@ router.get('/dashboard', /*withAuth,*/ async (req, res) => {
     });
 
 
+router.get('/login', (req, res) => {
+    // If the user is already logged in, redirect the request to another route
+    if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+    }
 
-// router.get('/login', (req, res) => {
-//     // If the user is already logged in, redirect the request to another route
-//     if (req.session.logged_in) {
-//     res.redirect('/');
-//     return;
-//     }
+    res.render('login',
+    { 
+        layout: 'signin',
+    });
+});
 
-//     res.render('login');
-// });
+router.get('/join', (req, res) => {
 
+    // If the user is already logged in, redirect the request to another route
+    if (req.session.logged_in) {
+      res.redirect('/dashboard');
+      return;
+    }
+  
+    res.render('join',
+    { 
+        layout: 'signin',
+    });
+    
+  });
 
+  router.post('/logout', (req, res) => {
+    if (req.session.logged_in) {
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    } else {
+      res.status(404).end();
+    }
+  });
 
 module.exports = router;
