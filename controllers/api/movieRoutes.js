@@ -4,6 +4,37 @@ const { Genre, GenreMovie, Movie, User, UserMovie } = require('../../models');
 const withAuth = require('../../utilities/auth');
 
 
+// == CREATE ==================================================================
+
+router.post('/:id', withAuth, async (req, res) => {
+
+console.log(req.session.user_id, req.params.id, req.body.notification_period, req.body.notified);
+
+  try {
+    const newWatchlist = await UserMovie.create({
+        user_id: req.session.user_id,
+        movie_id: req.params.id,
+        notification_period: req.body.notification_period,
+        notified: req.body.notified
+      },
+    );
+
+    console.log("Watchlist post = " + newWatchlist);
+
+    if (!newWatchlist) {
+      res.status(404).json({ message: 'There was a problem adding this movie to your watchlist.' });
+      return;
+    }
+
+    res.status(200).json(newWatchlist);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+// == READ ====================================================================
+
 
 router.get('/:id', withAuth, async (req, res) => {
 
@@ -17,7 +48,7 @@ router.get('/:id', withAuth, async (req, res) => {
         },
         include: 
         [
-                      {
+            {
               model:UserMovie,
 
               attributes:
@@ -47,19 +78,61 @@ router.get('/:id', withAuth, async (req, res) => {
   }
 });
 
+// == UPDATE ==================================================================
 
+router.put('/:id', withAuth, async (req, res) => {
+
+  // movie_id arrives as a string.
+  const movieID = parseInt(req.body.movie_id);
+
+  // add user_id to the object
+  req.body.user_id = req.session.user_id;
+
+  // update the movie_id to integer
+  req.body.movie_id = movieID;
+
+  console.log(req.body);
+
+  try {
+
+    const updatePreference = await UserMovie.update(
+      {notified: req.body.notified, notification_period: req.body.notification_period},
+      {
+        where: { movie_id: movieID, user_id: req.body.user_id},
+        returning: true,
+        plain: true
+      });
+
+      console.log(updatePreference);
+
+      if(updatePreference > 0) {
+        console.log("OK");
+        res.status(200).end();
+      } else {
+        console.log("BAD");
+        res.status(404).end();
+      }
+
+  } catch (err) {
+    console.log("BAD ERROR");
+    res.status(500).json(err);
+  }
+});
+
+// == DELETE ==================================================================
 
 router.delete('/:id', async (req, res) => {
+
   try {
-    const WatchlistData = await Watchlist.destroy({
+    const WatchlistData = await UserMovie.destroy({
       where: {
-        id: req.params.id,
+        movie_id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
     if (!WatchlistData) {
-      res.status(404).json({ message: 'No Watchlist found with this id!' });
+      res.status(404).json({ message: 'No watchlist found with this movie id!' });
       return;
     }
 
@@ -68,5 +141,7 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// ============================================================================
 
 module.exports = router;
