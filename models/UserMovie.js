@@ -34,8 +34,7 @@ UserMovie.init(
   },
 
   notification_period: {
-      type: DataTypes.ENUM,
-      values: ['1 day','2 days','3 days', '4 days', '5 days', '6 days', '1 week', '2 weeks','3 weeks', '1 month'],
+      type: DataTypes.STRING,
       allowNull: true,
   },
 },
