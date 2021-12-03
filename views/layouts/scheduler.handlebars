@@ -71,6 +71,7 @@
 
 <body>
 
+
   {{!-- <div class="flex-column justify-space-around">
       <header class="display-flex justify-space-between align-center p-2">
 
@@ -79,6 +80,10 @@
         </div>
 
       </header>
+
+  <div class="flex-column justify-space-around">
+    <div class="navbar">
+      <header class="display-block justify-space-between align-center p-5">
 
         <nav>
           <div class="pb-3 text-white" >
@@ -97,19 +102,19 @@
           </div>
         </nav> 
   </div> --}}
-  
+
 
     <div >   
         {{{ body }}}
     </div>
   
-
+  </div>
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="../../js/logout.js"></script>
   {{/if}}
-  <script src="../../js/watchlistPrefs.js"></script>
+
 
 
 </body>
