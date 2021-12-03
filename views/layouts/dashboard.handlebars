@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flicked | new release movie scheduler</title>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poiret+One&family=Raleway&display=swap" rel="stylesheet">    
 
 <link rel="shortcut icon" href="img/favicon.ico?ver=1.0" type="image/x-icon" />
 
@@ -26,17 +27,50 @@
   <link type="text/css" rel="stylesheet"  href="./css/jass.css">
   <link type="text/css" rel="stylesheet" href="./css/style_scheduler.css"/>
   
+    <link type="text/css" rel="stylesheet" href="./css/nav.css"/>
+
+  
 </head>
 
+<header>
   <!-- ================================================ --> 
+  {{!-- <div class="flex-column justify-space-around">
+      <header class="display-flex justify-space-between align-center p-2"> --}}
 
-<body>
-  <div class="flex-column justify-space-around">
-    
-    <div class="navbar">
+     {{!-- <div class="logo-container"> --}}
+      <a href="#"><img class="logo" src="./img/FlickedLogo.png" height="100px" width="100px"/></a>
+  {{!-- </div> --}}
+  <nav>
+      <ul id="navbarmenu">
+          <li>
+            <a href="/" >home</a>
+          </li>
+          <span class="divider">|</span> 
+          <li>
+            <a href="/dashboard" >Dashboard</a>
+          </li>
+          <span class="divider">|</span> 
+          <li>
+            {{#if logged_in}}
+            <a href="logout"><span id="log-out">logout</span></a>
+          </li>
+          <span class="divider">|</span> 
+            {{else}}
+          <li>
+            <a href="/login">login</a>
+          </li>
+          <span class="divider">|</span> 
+          <li>
+            <a href="/join">join</a>
+          </li>
+            {{/if}}
+      </ul>
+  </nav>
 
-      <header class="display-block justify-space-between align-center p-5">
-        <nav>
+
+</header>
+       
+        {{!-- <nav>
           <div class="pb-3" >
             <a href="/" >home</a>
             <span class="divider">|</span> 
@@ -50,16 +84,16 @@
             <a href="/join">join</a>
             {{/if}}
           </div>
-        </nav> 
+        </nav>  --}}
 
-        <div class="logo-container">
+        {{!-- <div class="logo-container">
             <a href="#"><img class="logo" src="./img/FlickedLogo.png" />
-        </div>
+        </div> --}}
 
-        <h1 class="text-white">
+        {{!-- <h1 class="text-white">
           <a href="/dashboard">Dashboard</a>
         </h1>
-      </header>
+      </header> --}}
 
     </div>
 

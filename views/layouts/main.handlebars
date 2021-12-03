@@ -2,7 +2,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flicked | new release movie scheduler</title>
-
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poiret+One&family=Raleway&display=swap" rel="stylesheet">    
   <link rel="shortcut icon" href="img/favicon.ico?ver=1.0" type="image/x-icon" /> 
 
   <!--- basic page needs and meta to boost SEO
@@ -22,21 +22,52 @@
   <link type="text/css" rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link type="text/css" rel="stylesheet"  href="./css/jass.css">
   <link type="text/css" rel="stylesheet" href="./css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="./css/nav.css"/>
+
   
 </head>
 
+<header>
   <!-- ================================================ --> 
+  {{!-- <div class="flex-column justify-space-around">
+      <header class="display-flex justify-space-between align-center p-2"> --}}
+
+     {{!-- <div class="logo-container"> --}}
+      <a href="#"><img class="logo" src="./img/FlickedLogo.png" height="100px" width="100px"/></a>
+  {{!-- </div> --}}
+  <nav>
+      <ul id="navbarmenu">
+          <li>
+            <a href="/" >home</a>
+          </li>
+          <span class="divider">|</span> 
+          <li>
+            <a href="/dashboard" >Dashboard</a>
+          </li>
+          <span class="divider">|</span> 
+          <li>
+            {{#if logged_in}}
+            <a href="logout"><span id="log-out">logout</span></a>
+          </li>
+          <span class="divider">|</span> 
+            {{else}}
+          <li>
+            <a href="/login">login</a>
+          </li>
+          <span class="divider">|</span> 
+          <li>
+            <a href="/join">join</a>
+          </li>
+            {{/if}}
+      </ul>
+  </nav>
+
+
+</header>
+
 <body>
-  <div class="flex-column justify-space-around">
-      <header class="display-flex justify-space-between align-center p-2">
 
-        <div class="logo-container">
-            <a href="#"><img class="logo" src="./img/FlickedLogo.png" /></a>
-        </div>
-
-      </header>
-
-        <nav>
+        {{!-- <nav>
           <div class="pb-3 text-white" >
             <a href="/" >home</a>
             <span class="divider">|</span> 
@@ -51,18 +82,18 @@
             <a href="/join">join</a>
             {{/if}}
           </div>
-        </nav> 
-  </div>
+        </nav>  --}}
+  {{!-- </div> --}}
 
-  <div class="stage">
+  {{!-- <div class="stage">
     <div class="poster-container">
-      <div class="ring">
+      <div class="ring"> --}}
     
         {{{ body }}}
 
-      </div>
+      {{!-- </div>
     </div>
-  </div>
+  </div> --}}
 
 
   <!-- Render script for logged in users only -->
