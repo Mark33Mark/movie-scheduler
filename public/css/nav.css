@@ -1,0 +1,46 @@
+
+
+header {
+    padding: 30px;
+}
+#nav {
+    display:table; 
+    margin:0 auto; 
+    text-align:center; 
+    }
+#nav ul {
+list-style:none;
+display:inline-block; /* IE6/7 haslayout trip-switch */
+}
+
+
+
+#nav li {
+display:inline;
+}
+
+#nav a {
+text-decoration:none; 
+padding:0 30px; /* variable width */
+font-family: 'Raleway', sans-serif;
+color: cornflowerblue;
+}
+
+figure {
+        width:100%;
+text-align:center;
+    }
+
+/* #logo {
+        display:inline-block;
+margin: 0 auto;
+    } */
+
+    
+    @media only screen and (max-width: 600px) {
+        body {
+          background-color: lightblue;
+        }
+      } 
+
+

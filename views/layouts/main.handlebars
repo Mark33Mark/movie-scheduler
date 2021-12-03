@@ -22,46 +22,50 @@
   <link type="text/css" rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link type="text/css" rel="stylesheet"  href="./css/jass.css">
   <link type="text/css" rel="stylesheet" href="./css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="./css/nav.css"/>
+
   
 </head>
 
+<header>
   <!-- ================================================ --> 
-<body>
-  <div class="flex-column justify-space-around">
-      <header class="display-flex justify-space-between align-center p-2">
+  {{!-- <div class="flex-column justify-space-around">
+      <header class="display-flex justify-space-between align-center p-2"> --}}
 
-        <div class="logo-container">
-            <a href="#"><img class="logo" src="./img/FlickedLogo.png" /></a>
-        </div>
-
-      </header>
-<nav>
-    <ul id="nav">
-        <li>
-          <a href="/" >home</a>
-        </li>
-        <span class="divider">|</span> 
-        <li>
-          <a href="/dashboard" >Dashboard</a>
-        </li>
-        <span class="divider">|</span> 
-        <li>
-                      {{#if logged_in}}
-          <a href="logout"><span id="log-out">logout</span></a>
-        </li>
-        <span class="divider">|</span> 
-                    {{else}}
-<li>
-          <a href="/login">login</a>
-        </li>
-        <span class="divider">|</span> 
-        <li>
-          <a href="/join">join</a>
-        </li>
-                    {{/if}}
-
-    </ul>
+     <div class="logo-container">
+      <a href="#"><img class="logo" src="./img/FlickedLogo.png" height="100px" width="100px"/></a>
+  </div>
+  <nav>
+      <ul id="nav">
+          <li>
+            <a href="/" >home</a>
+          </li>
+          <span class="divider">|</span> 
+          <li>
+            <a href="/dashboard" >Dashboard</a>
+          </li>
+          <span class="divider">|</span> 
+          <li>
+            {{#if logged_in}}
+            <a href="logout"><span id="log-out">logout</span></a>
+          </li>
+          <span class="divider">|</span> 
+            {{else}}
+          <li>
+            <a href="/login">login</a>
+          </li>
+          <span class="divider">|</span> 
+          <li>
+            <a href="/join">join</a>
+          </li>
+            {{/if}}
+      </ul>
   </nav>
+
+
+</header>
+
+<body>
 
         {{!-- <nav>
           <div class="pb-3 text-white" >
@@ -79,7 +83,7 @@
             {{/if}}
           </div>
         </nav>  --}}
-  </div>
+  {{!-- </div> --}}
 
   {{!-- <div class="stage">
     <div class="poster-container">
