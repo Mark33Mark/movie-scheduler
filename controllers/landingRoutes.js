@@ -14,21 +14,6 @@ router.get('/', async (req, res) => {
                 'overview',
                 'poster_path',
             ],
-            // include:
-            // [
-            //     {
-            //         model: GenreMovie,
-            //         attributes:
-            //         [
-            //             'genre_id',
-            //             'movie_id',
-            //         ],
-            //         where:
-            //         [
-            //             movie_id = movie.id,
-            //         ]
-            //     },
-            // ],
         });
 
     const movieInfo = movies.map(( info ) => info.get({ plain: true }) );
@@ -53,14 +38,18 @@ router.get('/dashboard', withAuth, async (req, res) => {
         { 
             id:req.session.user_id, 
         },
-            include: 
-            [
-                {
-                    model: Movie,
-                    attributes:['title', 'poster_path'],
-                    include:[{model:Genre, attributes:['genre_name']}]
-                },
-            ],
+        attributes:
+        {
+            exclude: ['password'],
+        },
+        include: 
+        [
+            {
+                model: Movie,
+                attributes:['title', 'poster_path'],
+                include:[{model:Genre, attributes:['genre_name']}]
+            },
+        ],
         });
 
         let user = userData.map(( post ) => post.get({ plain: true }));        

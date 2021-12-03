@@ -1,39 +1,39 @@
 <div class="row">
     <div class="col-auto display-block">
 
-    {{#each movie_found as |movie|}}
-            <a href="../../api/movie/{{ movie.id }}">
+        {{#each movie_found as |movie|}}
+                <a href="../../api/movie/{{ movie.id }}">
 
-                <h5 class="p-2">{{ movie.title }} <br />|
-                    {{#each genres as | genre |}} 
-                        <span class="genres">  {{ genre.genre_name }} | </span>    
-                    {{/each}}
-                </h5>
-            </a>
-            <h6 class="p-2 release-date">Movie release date: {{format_date movie.release_date}}</h6>
-            <h6 class="p-2 release-date">Language: {{movie.language}}</h6>
-            <h6 class="p-2 release-date">Popularity score (aggregation of fans scores): {{movie.popularity}}</h6>
-            
-                {{#if movie.poster_path }}
-                <span class="card-poster">
-                    <img src = "https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="" height="300px" width="200px"/> 
-                </span>  
-                {{else}}
-                    <img src = "../../img/PlaceHolder.jpg" alt="" height="600px" width="400px"/> 
-                    <p class="poster_counter" style="font-size: 2rem;">{{movie.id}}.</p>
-                {{/if}} 
+                    <h5 class="p-2">{{ movie.title }} <br />|
+                        {{#each genres as | genre |}} 
+                            <span class="genres">  {{ genre.genre_name }} | </span>    
+                        {{/each}}
+                    </h5>
+                </a>
+                <h6 class="p-2 release-date">Movie release date: {{format_date movie.release_date}}</h6>
+                <h6 class="p-2 release-date">Language: {{movie.language}}</h6>
+                <h6 class="p-2 release-date">Popularity score (aggregation of fans scores): {{movie.popularity}}</h6>
+                
+                    {{#if movie.poster_path }}
+                    <span class="card-poster">
+                        <img src = "https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="" height="300px" width="200px"/> 
+                    </span>  
+                    {{else}}
+                        <img src = "../../img/PlaceHolder.jpg" alt="" height="600px" width="400px"/> 
+                        <p class="poster_counter" style="font-size: 2rem;">{{movie.id}}.</p>
+                    {{/if}} 
 
-                {{#if movie.backdrop_path }}
-                <span class="card-poster">
-                    <img src = "https://image.tmdb.org/t/p/w500{{ movie.backdrop_path }}" alt="" height="300px" width="500px"/> 
-                </span>  
-                {{/if }}
+                    {{#if movie.backdrop_path }}
+                    <span class="card-poster">
+                        <img src = "https://image.tmdb.org/t/p/w500{{ movie.backdrop_path }}" alt="" height="300px" width="500px"/> 
+                    </span>  
+                    {{/if }}
 
-                <div class="col-6 movie-overview">
-                    {{ movie.overview }}
-                </div>  
+                    <div class="col-6 movie-overview">
+                        {{ movie.overview }}
+                    </div>  
 
-                <div 
+
 
                 {{#if usermovies}}             
                     {{#each usermovies as | prefs |}}
@@ -47,7 +47,7 @@
                                 </div>
 
                                 <div class="col-9">
-                                    <form class="form preferences">
+                                    <form class="form" id="preferences">
                                         <div class="form-group">
                                             <label for="notification" id="notify-me">Notification preference: 
                                                 {{#if prefs.notification_period}}
@@ -55,7 +55,7 @@
                                                 {{else}}
                                                 Don't Notify
                                                 {{/if}}
-                                            </label>
+                                            </label><br />
                                             <label for="change-prefs">Check box to be notified:</label>
                                             <input type="checkbox" id="notify" name="notify" onclick="checkBoxChange();"><br />
                                             <label for="change-prefs" id="notice-period-label">Select when to be notified:</label>
@@ -74,7 +74,7 @@
                                             <span id="release-label">before {{format_date movie.release_date}}</span>
                                         </div>
                                         <div class="form-group">
-                                            <button class="btn btn-primary" type="submit">Update Preferences</button>
+                                            <button class="btn btn-primary" onClick="updateFormHandler();">Update Preferences</button>
                                             <button class="btn btn-primary" id="remove-watching">Remove from watchlist?</button>
                                         </div>
                                     </form>
@@ -82,11 +82,55 @@
                             </div>
                         </div>
                     </div>
+                    <script src="../../js/watchlistPrefs.js"></script>
                     {{/each}}
                     {{else}}
-                        <div class="no-button" id="add-watchlist">Add to watchlist?</div>
+
+                    <div class="row justify-center">
+                        <div class="col-md-6">
+
+                            <div id="add-to-watchlist">
+                                <div class = "card-banner card-rounded user-pref">
+                                    <div class="card-header display-flex align-center">
+                                        <h2>Add this film to your watchlist?</h2>
+                                    </div>
+
+                                    <div class="col-9">
+                                        <form class="form" id="add-preferences">
+                                            <div class="form-group">
+                                                <label for="notification" id="add-notify-me">Notification preference: 
+                                                </label><br />
+                                                <label for="change-prefs">Check box to be notified:</label>
+                                                <input type="checkbox" id="add-notify" name="notify" onclick="checkBoxChange();" checked><br />
+                                                <label for="change-prefs" id="add-notice-period-label">Select when to be notified:</label>
+                                                <select name="notice-period" id="add-notice-period">
+                                                    <option value='1 day'> 1 day</option>
+                                                    <option value='2 days'>2 days</option>
+                                                    <option value='3 days'>3 days</option>
+                                                    <option value='4 days'>4 days</option>
+                                                    <option value='5 days'>5 days</option>
+                                                    <option value='6 days'>6 days</option>
+                                                    <option value='1 week'>1 week</option>
+                                                    <option value='2 weeks'>2 weeks</option>
+                                                    <option value='3 weeks'>3 weeks</option>
+                                                    <option value='1 month'>1 month</option>
+                                                </select> 
+                                                <span id="add-release-label">before {{format_date movie.release_date}}</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-primary" id="create-watchlist">Add to Watchlist</button>
+                                                <button class="btn btn-primary" id="cancel-add-watchlist">Cancel</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="no-button" id="add-watchlist" onclick="openFormHandler();">Add to watchlist?</div>
+                    <script src="../../js/addWatchlist.js"></script>
                 {{/if}}
-                
+
         {{/each}}
     </div>
 </div>
