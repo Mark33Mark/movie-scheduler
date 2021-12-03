@@ -1,53 +1,37 @@
-<div class="container">
 <div class="row">
+    <div class="col-auto display-block">
 
     {{#each movie_found as |movie|}}
-
-        <div class="col-sm-12 col-lg-6">
             <a href="../../api/movie/{{ movie.id }}">
-                <h3 class="p-2 text-center font-weight-bold">{{ movie.title }} <br />|
 
-
+                <h5 class="p-2">{{ movie.title }} <br />|
                     {{#each genres as | genre |}} 
-                        <span class="genres font-weight-light">  {{ genre.genre_name }} | </span>    
+                        <span class="genres">  {{ genre.genre_name }} | </span>    
                     {{/each}}
-                </h3>
+                </h5>
             </a>
-
-
-                <div class="movie-overview">
-                    <h5>Overview: <br><br>{{ movie.overview }}<br><br></h5>
-                </div>
-
-                <div class="text-center mb-5">
-                <button class="btn btn-primary" type="submit">Add to Watchlist</button>
-                </div>
-            </div> 
-
-            <div class="col-sm-12 col-lg-6">
-                {{#if movie.poster_path }}
-                <span class="card-poster">
-                    <img src = "https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" class="img-fluid" alt="" height="100%" width="100%"/> 
-
             <h6 class="p-2 release-date">Movie release date: {{format_date movie.release_date}}</h6>
             <h6 class="p-2 release-date">Language: {{movie.language}}</h6>
             <h6 class="p-2 release-date">Popularity score (aggregation of fans scores): {{movie.popularity}}</h6>
             
-
-
+                {{#if movie.poster_path }}
+                <span class="card-poster">
+                    <img src = "https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="" height="300px" width="200px"/> 
                 </span>  
                 {{else}}
-                    <img src = "../../img/PlaceHolder.jpg" alt="" height="100%" width="100%"/> 
+                    <img src = "../../img/PlaceHolder.jpg" alt="" height="600px" width="400px"/> 
                     <p class="poster_counter" style="font-size: 2rem;">{{movie.id}}.</p>
                 {{/if}} 
 
-                <!--{{#if movie.backdrop_path }}
-                <span class="card-poster mx-auto">
-                    <img src = "https://image.tmdb.org/t/p/w500{{ movie.backdrop_path }}" alt="" height="100%" width="100%"/> 
+                {{#if movie.backdrop_path }}
+                <span class="card-poster">
+                    <img src = "https://image.tmdb.org/t/p/w500{{ movie.backdrop_path }}" alt="" height="300px" width="500px"/> 
                 </span>  
-                {{/if }}-->
+                {{/if }}
 
-            </div>     
+                <div class="col-6 movie-overview">
+                    {{ movie.overview }}
+                </div>  
 
                 <div 
 
@@ -106,3 +90,4 @@
         {{/each}}
     </div>
 </div>
+
