@@ -45,31 +45,6 @@ router.get('/', async (req, res) => {
     }
 });
 
-//Get movie by id (clickable poster)
-router.get('/:id', async (req, res) => {
-    try {
-      const movies = await Movie.findByPk(req.params.id, {
-        attributes:
-            [   
-                'id',
-                'title',
-                'release_date',
-                'overview',
-                'poster_path',
-            ],
-      });
-  
-      const movieid = movies.get({ plain: true });
-  
-      res.render('movie', {
-        ...movieid,
-        logged_in: req.session.logged_in
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
-
 
 router.get('/dashboard', withAuth, async (req, res) => {
     try {
