@@ -8,12 +8,12 @@
 
   setUpForm = () => {
   if(notify_me.innerText === "Notification preference: Don't Notify"){
-    notice_checkbox.checked = false;
+    // notice_checkbox.checked = false;
     notice_label.style.display='none';
     notice_period.style.display='none';
     release_label.style.display='none';
   } else {
-    notice_checkbox.checked = true;
+    // notice_checkbox.checked = true;
     notice_label.style.display='inline';
     notice_period.style.display='inline';
     release_label.style.display='inline';
@@ -39,21 +39,25 @@ checkBoxChange = () =>{
                                             
 const updateFormHandler = async (event) => {
 
-  event.preventDefault();
+  // event.preventDefault();
+
+  let notification_period = "";
 
   // get the checkbox status
   let notified = notice_checkbox.checked;
 
   // get the user selected notification period
-  let notification_period = notice_period.value.trim();
+  if(notified===false){
+    notification_period = null;
+  } else {
+  notification_period = notice_period.value.trim();
+  }
 
   // get the post id from the url
   const path = window.location.pathname;
   const movie_id = path.slice(path.lastIndexOf("/")+1);
 
-console.log(movie_id, notified, notification_period);
-
-  if (movie_id&&notified&&notification_period) {
+  console.log(movie_id, notified, notification_period);
 
         const response = await fetch( `/api/movie/${movie_id}`, {
           method: 'PUT',
@@ -63,14 +67,17 @@ console.log(movie_id, notified, notification_period);
           },
         });
 
+        console.log(movie_id, notified.value, notification_period);
+        window.location.reload(true);
+
         if (response.ok) {
-          alert(`Your watchlist preference for Movie id: ${id} has now been updated.`);
-          document.location.replace('/dashboard');
+          alert(`Your watchlist preference for Movie id: ${movie_id} has now been updated.`);
+          // document.location.replace('/dashboard');
 
         } else {
           alert('Failed updating the movie watchlist preferences.');
         }
-    }
+
 };
 
 
@@ -82,7 +89,7 @@ const deleteButtonHandler = async (event) => {
   const path = window.location.pathname;
   const id = path.slice(path.lastIndexOf("/")+1);
 
-  console.log(id)
+  console.log(id);
 
   const response = await fetch(`/api/movie/${id}`, {
     method: 'DELETE',
@@ -101,9 +108,9 @@ document
   .querySelector('#remove-watching')
   .addEventListener('click', deleteButtonHandler);
 
-document
-  .querySelector('#preferences')
-  .addEventListener('submit', updateFormHandler);
+// document
+//   .querySelector('#preferences')
+//   .addEventListener('submit', updateFormHandler);
 
 
   setUpForm();

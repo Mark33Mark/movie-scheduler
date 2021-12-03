@@ -95,26 +95,29 @@ router.put('/:id', withAuth, async (req, res) => {
 
   try {
 
+    const getUniqueID = await UserMovie.findOne(
+      {
+        where: { movie_id: movieID, user_id: req.body.user_id},
+      });
+
     const updatePreference = await UserMovie.update(
       {notified: req.body.notified, notification_period: req.body.notification_period},
       {
-        where: { movie_id: movieID, user_id: req.body.user_id},
+        where: { id:getUniqueID.id},
         returning: true,
-        plain: true
       });
 
-      console.log(updatePreference);
-
-      if(updatePreference > 0) {
+      if(updatePreference) {
         console.log("OK");
-        res.status(200).end();
+        res.status(200);
       } else {
         console.log("BAD");
-        res.status(404).end();
+        res.status(404);
       }
 
   } catch (err) {
     console.log("BAD ERROR");
+    console.log(err);
     res.status(500).json(err);
   }
 });
