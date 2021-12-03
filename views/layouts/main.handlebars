@@ -2,7 +2,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flicked | new release movie scheduler</title>
-
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poiret+One&family=Raleway&display=swap" rel="stylesheet">    
   <link rel="shortcut icon" href="img/favicon.ico?ver=1.0" type="image/x-icon" /> 
 
   <!--- basic page needs and meta to boost SEO
@@ -35,8 +35,35 @@
         </div>
 
       </header>
+<nav>
+    <ul id="nav">
+        <li>
+          <a href="/" >home</a>
+        </li>
+        <span class="divider">|</span> 
+        <li>
+          <a href="/dashboard" >Dashboard</a>
+        </li>
+        <span class="divider">|</span> 
+        <li>
+                      {{#if logged_in}}
+          <a href="logout"><span id="log-out">logout</span></a>
+        </li>
+        <span class="divider">|</span> 
+                    {{else}}
+<li>
+          <a href="/login">login</a>
+        </li>
+        <span class="divider">|</span> 
+        <li>
+          <a href="/join">join</a>
+        </li>
+                    {{/if}}
 
-        <nav>
+    </ul>
+  </nav>
+
+        {{!-- <nav>
           <div class="pb-3 text-white" >
             <a href="/" >home</a>
             <span class="divider">|</span> 
@@ -51,18 +78,18 @@
             <a href="/join">join</a>
             {{/if}}
           </div>
-        </nav> 
+        </nav>  --}}
   </div>
 
-  <div class="stage">
+  {{!-- <div class="stage">
     <div class="poster-container">
-      <div class="ring">
+      <div class="ring"> --}}
     
         {{{ body }}}
 
-      </div>
+      {{!-- </div>
     </div>
-  </div>
+  </div> --}}
 
 
   <!-- Render script for logged in users only -->
