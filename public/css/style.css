@@ -10,7 +10,6 @@
     --border-radius: 0.3rem;
   }
   
-
   html, body, .stage, .ring, .img {
     width:100%;
     height: 50%;
@@ -43,7 +42,34 @@ html {
   font-family: system-ui;
   /* background: #3d76d9; */
   background: rgb(50, 50, 50);
+  height: 100%;
+    /* background-image: url("../img/film_roll_png.png"); */
+    /* background-image: url("../images/white.jpeg"); */
+    /* background-size:cover; */
+    /* background-attachment: fixed; */
+    /* background-position: center;
+    background-repeat: no-repeat;  */
+    text-size-adjust: 10px;
+  /* background: url("../img/4560048.jpeg"); */
+  /* filter: blur(8px);
+  -webkit-filter: blur(8px); */ 
 }
+
+/* .bg-image {
+
+  background-image: url("../img/4560048.jpeg");
+  
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  height: 100%; 
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+
 
 .logo-container{
   /* padding-top:20rem; */
@@ -145,9 +171,19 @@ aside {
 .card_landing {
       position: absolute;
       bottom: 1px;
-      width: 50%;
-      margin: 0 auto;
+color:#fa7f72;
+font-size: 10px;
+      margin: auto 50%;
+      width:40%;
     }
+
+    /* footer {
+      position: relative;
+      bottom: -80%;
+      width: 100%;
+      height: 60px;
+      background:#fa7f72;
+    } */
   @media only screen and (max-width: 600px) {
 
       #navbarmenu {
