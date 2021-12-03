@@ -34,21 +34,22 @@ const openFormHandler = () => {
 
 const createFormHandler = async (event) => {
 
-    event.preventDefault();
-
     // get the checkbox status
     let notified = add_notice_checkbox.checked;
 
     // get the user selected notification period
-    let notification_period = add_notice_period.value.trim();
+      // get the user selected notification period
+    if(notified===false){
+        notification_period = null;
+    } else {
+    notification_period = notice_period.value.trim();
+    }
 
     // get the post id from the url
     const path = window.location.pathname;
     const movie_id = path.slice(path.lastIndexOf("/")+1);
 
     console.log(movie_id, notified, notification_period);
-
-    if (movie_id&&notified&&notification_period) {
 
             const response = await fetch( `/api/movie/${movie_id}`, {
             method: 'POST',
@@ -58,6 +59,8 @@ const createFormHandler = async (event) => {
             },
             });
 
+            window.location.reload(true);
+
             if (response.ok) {
             alert(`Your watchlist preference for Movie id: ${movie_id} has now been added.`);
             document.location.replace('/dashboard');
@@ -65,7 +68,6 @@ const createFormHandler = async (event) => {
             } else {
             alert('Failed to add the movie to your watchlist.');
         }
-    }
 };
 
 
@@ -76,11 +78,6 @@ const cancelButtonHandler = async (event) => {
     return;
 };
 
-
-
-document
-    .querySelector('#create-watchlist')
-    .addEventListener('click', createFormHandler);
 
 document
     .querySelector('#cancel-add-watchlist')
