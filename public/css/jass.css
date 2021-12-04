@@ -1237,6 +1237,10 @@ form [type='radio'] {
   align-items: center;
 }
 
+.align-baseline{
+  align-items: baseline;
+}
+
 .align-content-start {
   align-content: flex-start;
 }
