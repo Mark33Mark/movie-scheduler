@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-auto display-block">
+    <div class="col-auto display-block watchlist-cards">
 
             {{#each user as | users |}}
                 <h4 class="text-white">Welcome {{name}}</h4>
@@ -14,7 +14,10 @@
                                     {{#each genres as | genre |}} 
                                         <span class="genres">  {{ genre.genre_name }} | </span>    
                                     {{/each}}
+                                    <br />
+                                    <span class="genres">Release date: {{format_date movie.release_date}} </span>
                                 </h5>
+                                
 
                                 <span class="card-poster">
                                     <img src = "https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" height="90px" width="60px"/> 
@@ -23,15 +26,14 @@
                         </div>
                     </div>
                 </a>
-                
+                <div style="display:inline-block;">
+                    <img src="./img/delete.png" alt="" height="15%" width="15%" onClick="deleteButtonHandler({{ movie.usermovie.movie_id }});"/>
+                </div>
             {{/each}}
         {{/each}}
     </div>
     
 </div>
 
-                {{!-- <h6 class="p-2 release-date">Release date: {{format_date movie.release_date}}</h6>
-                <h6 class="p-2 release-date">Language: {{movie.language}}</h6>
-                <h6 class="p-2 release-date">Popularity score {{movie.popularity}}</h6>
-                    <div class="movie-overview">
-                        <h5>Overview: <br><br>{{ movie.overview }}<br><br></h5> --}}
+<script src="../../js/dashboard.js"></script>
+

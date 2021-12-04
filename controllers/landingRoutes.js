@@ -46,7 +46,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
         [
             {
                 model: Movie,
-                attributes:['title', 'poster_path'],
+                attributes:['title', 'release_date', 'poster_path'],
                 include:[{model:Genre, attributes:['genre_name']}]
             },
         ],
