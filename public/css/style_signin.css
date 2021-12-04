@@ -160,7 +160,7 @@ input[type=password] {
   margin-top: 2rem;
 }
 
-.card-landing {
+/* .card-landing {
 
   padding-top: 2rem;
   color: rgb(185, 200, 228);
@@ -169,7 +169,7 @@ input[type=password] {
 
 .card-landing > p{
   font-size: 0.85rem;
-}
+} */
 
 @media only screen and (max-width: 600px) {
 

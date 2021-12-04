@@ -425,10 +425,15 @@ a {
 }
 
 a:hover {
-  /* text-shadow: -12px 8px 16px rgba(245, 43, 7, 0.99); */
+  text-shadow: -12px 8px 16px rgba(164, 154, 152, 0.99);
   /* text-decoration:blanchedalmond; */
-  font-size: 150%;}
+  /* font-size: 150%;} */
+}
 
+.card-landing {
+  height: 5%;
+  width: 5%;
+}
 
 /* HEIGHT / WIDTH UTILS */
 .w-100 {
@@ -1712,4 +1717,15 @@ form [type='radio'] {
   .align-content-center-xl {
     align-content: center;
   }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  #navbarmenu {
+    display: flex;
+    flex-direction: row;
+    transform:translate(25%, 0%);
+  }
+
 }
