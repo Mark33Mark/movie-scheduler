@@ -139,12 +139,14 @@ nav {
 }
 
 .card {
-  width: 50%;
+  width: 55%;
   border-radius: 25%;
-  background-color: pink;
-  margin: 0 auto;
+  display:inline-block;
+  margin: 0.5rem auto;
+}
 
-
+.watchlist-cards{
+  margin-left: 33%;
 }
 
 @media only screen and (max-width: 600px) {
