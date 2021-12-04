@@ -37,7 +37,7 @@ checkBoxChange = () =>{
 };
 
                                             
-const updateFormHandler = async (event) => {
+const updateFormHandler = async ( event ) => {
 
   let notification_period = "";
 

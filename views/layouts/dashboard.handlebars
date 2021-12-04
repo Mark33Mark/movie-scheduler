@@ -39,30 +39,21 @@
       <header class="display-flex justify-space-between align-center p-2"> --}}
 
      {{!-- <div class="logo-container"> --}}
-      <a href="#"><img class="logo" src="./img/FlickedLogo.png" height="100px" width="100px"/></a>
+      <a href="#"><img class="logo" src="./img/FlickedLogo.png" height="200px" width="250px"/></a>
   {{!-- </div> --}}
   <nav>
       <ul id="navbarmenu">
           <li>
-            <a href="/" >home</a>
-          </li>
-          <span class="divider">|</span> 
-          <li>
-            <a href="/dashboard" >Dashboard</a>
+            <a href="/" >movies</a>
           </li>
           <span class="divider">|</span> 
           <li>
             {{#if logged_in}}
             <a href="logout"><span id="log-out">logout</span></a>
           </li>
-          <span class="divider">|</span> 
             {{else}}
           <li>
             <a href="/login">login</a>
-          </li>
-          <span class="divider">|</span> 
-          <li>
-            <a href="/join">join</a>
           </li>
             {{/if}}
       </ul>

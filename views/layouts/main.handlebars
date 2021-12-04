@@ -37,11 +37,6 @@
   {{!-- </div> --}}
   <nav>
       <ul id="navbarmenu">
-          <li>
-            <a href="/" >home</a>
-          </li>
-          <span class="divider">|</span> 
-          <li>
           {{#if logged_in}}
             <a href="/dashboard" >dashboard</a>
           </li>
@@ -49,7 +44,6 @@
           <li>
             <a href="logout"><span id="log-out">logout</span></a>
           </li>
-          <span class="divider">|</span> 
             {{else}}
           <li>
             <a href="/login">login</a>

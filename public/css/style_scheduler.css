@@ -56,14 +56,13 @@ a {
 h3 {
   font-family: 'Poiret One', cursive;
   font-size:50px;
-
 }
 
 .h6 {
   font-family: 'Poiret One', cursive;
   font-size:20px;
-
 }
+
 header {
   padding: 40px;
   text-align: center; 
@@ -78,10 +77,12 @@ header {
 }
 
 .genres{
+  width:10rem;
   font-size: 1rem;
 }
   
 .no-button{
+  flex: 0 0 80%;
   background-color: white;
   border: none;
   color: #1b89bc;
@@ -92,7 +93,11 @@ header {
   font-size: 16px;
   transition-duration: 0.4s;
   cursor: pointer;
-  margin-left: 40%;
+  margin-left: 4%;
+}
+
+.landscape-movie-pic{
+  flex: 0 0 100%;
 }
 
 .no-button:hover{
@@ -132,9 +137,14 @@ aside {
 }
 
 .movieposter {
-width:auto;
-height: auto;
+  flex: 0 1 50%;
 }
+
+.img-fluid{
+  width: auto;
+  height: 20rem;
+}
+
 .release-date{
   color:whitesmoke;
   padding: 0;
@@ -154,13 +164,4 @@ height: auto;
   }
 
   
-}
-
-@media only screen and (max-width: 900px) {
-
-
-
-  .no-button {
-    margin-left: 25%;
-  }
 }
