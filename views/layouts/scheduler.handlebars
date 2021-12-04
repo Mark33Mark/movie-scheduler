@@ -32,92 +32,46 @@
   <!-- ================================================ --> 
 
   <header>
-  <!-- ================================================ --> 
-  {{!-- <div class="flex-column justify-space-around">
-      <header class="display-flex justify-space-between align-center p-2"> --}}
+    
+    <a href="#">
+      <img class="logo" src="../../img/FlickedLogo.png" height="200px" width="250px"/>
+    </a>
 
-     {{!-- <div class="logo-container"> --}}
-      <a href="#"><img class="logo" src="../../img/FlickedLogo.png" height="100px" width="100px"/></a>
-  {{!-- </div> --}}
-  <nav>
-      <ul id="navbarmenu">
-          <li>
-            <a href="/" >home</a>
-          </li>
-          <span class="divider">|</span> 
-          <li>
-            <a href="/dashboard" >dashboard</a>
-          </li>
-          <span class="divider">|</span> 
-          <li>
-            {{#if logged_in}}
-            <a href="logout"><span id="log-out">logout</span></a>
-          </li>
-          <span class="divider">|</span> 
-            {{else}}
-          <li>
-            <a href="/login">login</a>
-          </li>
-          <span class="divider">|</span> 
-          <li>
-            <a href="/join">join</a>
-          </li>
-            {{/if}}
-      </ul>
-  </nav>
-
-
-</header>
-
-
-<body>
-
-
-  {{!-- <div class="flex-column justify-space-around">
-      <header class="display-flex justify-space-between align-center p-2">
-
-        <div class="logo-container">
-            <a href="/"><img class="logo" src="../../img/FlickedLogo.png" /></a>
-        </div>
-
-      </header>
-
-  <div class="flex-column justify-space-around">
-    <div class="navbar">
-      <header class="display-block justify-space-between align-center p-5">
-
-        <nav>
-          <div class="pb-3 text-white" >
-            <a href="/" >home</a>
+    <nav>
+        <ul id="navbarmenu">
+            <li>
+              <a href="/" >movies</a>
+            </li>
             <span class="divider">|</span> 
-            <a href="/dashboard" >dashboard</a>
+            <li>
+              <a href="/dashboard" >dashboard</a>
+            </li>
             <span class="divider">|</span> 
-            <!-- Conditionally render login or logout links -->
-            {{#if logged_in}}
-            <a href="/logout"><span id="log-out">logout</span></a>
-            {{else}}
-            <a href="/login">login</a>
-            <span class="divider">|</span> 
-            <a href="/join">join</a>
-            {{/if}}
-          </div>
-        </nav> 
-  </div> --}}
+              {{#if logged_in}}
+            <li>
+              <a href="logout"><span id="log-out">logout</span></a>
+            </li>
+              {{else}}
+            <li>
+              <a href="/login">login</a>
+            </li>
+              {{/if}}
+        </ul>
+    </nav>
 
+  </header>
 
-    <div >   
+  <body>
+
+    <div>   
         {{{ body }}}
     </div>
-  
-  </div>
 
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="../../js/logout.js"></script>
-  {{/if}}
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+    <script src="../../js/logout.js"></script>
+    {{/if}}
 
-
-
-</body>
+  </body>
 
 </html>

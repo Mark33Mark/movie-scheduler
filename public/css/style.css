@@ -169,13 +169,13 @@ aside {
 }
 
 .card_landing {
-      position: absolute;
-      bottom: 1px;
-color:  rgb(73, 73, 73);
-
-font-size: 10px;
+      position: relative;
+      text-align: center;
+      transform: translate(-17.5rem, 35rem);
+      color:  rgb(255, 255, 255);
+      font-size: 1rem;
       margin: auto 50%;
-      width:40%;
+      width:35rem;
     }
 
     /* footer {
@@ -193,15 +193,36 @@ font-size: 10px;
         flex-direction: column;
       }
         .poster-container {
-          /* /* perspective: 2000px; */
+          
           width: 10px;
           height: 20px;  
-          /* left:50%;
-          top:50%;
-          transform:translate(-50%,-50%); */ 
+
         }
+
+        .logo {
+          transform:translate(30%,-10%);
+        } 
       }
   
+      @media (max-width: 450px) {
+          html{
+            height: 100%;
+            width: 100%;
+          }
 
+          .logo {
+            width:100%;
+            height: auto;
+          } 
+
+          .poster-container {
+            /* perspective: 2000px; */
+            width: 10px;
+            height: 20px;  
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+          }
+        }
 
   

@@ -32,8 +32,8 @@ const openFormHandler = () => {
     add_watchlist.style.display   ='none';
 };
 
-const createFormHandler = async (event) => {
-
+const createFormHandler = async ( event ) => {
+    event.preventDefault();
     // get the checkbox status
     let notified = add_notice_checkbox.checked;
 
@@ -48,6 +48,8 @@ const createFormHandler = async (event) => {
     // get the post id from the url
     const path = window.location.pathname;
     const movie_id = path.slice(path.lastIndexOf("/")+1);
+
+    console.log("HERE");
 
     console.log(movie_id, notified, notification_period);
 

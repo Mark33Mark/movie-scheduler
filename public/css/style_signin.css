@@ -23,11 +23,7 @@ background: rgb(50, 50, 50);
 }
 
 .logo {
-    /* margin: 0 25vw; */
     width:33%;
-    /* padding: 1rem 0;
-    max-width: 45rem;
-    filter: brightness(0.75); */
     height: auto;
 }
 
@@ -138,35 +134,11 @@ nav {
   align-items: center;
 }
 
-/* .film-roll{
-  position: absolute;
-  display: inline-block;
+.film-roll-signup{
   margin-left: auto;
   margin-right: auto;
-  width: 40rem;
-  height: 40rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
+  width: 40rem; 
 
-
-
-.film-roll-signup{
-  position: absolute; 
-    /* display: inline-block; */
-    margin-left: auto;
-    margin-right: auto;
-    /* width: 40rem; */
-    height: 55rem;
-    /* background-image: url(../img/img_514815.png); */
-    background-repeat: no-repeat;
-    background-size: 100% 100%; 
-}
-
-.login-form{
-  margin-left: 5rem;
-  margin-top: 5.5rem;
-  
 }
 
 input[type=text] {
@@ -179,52 +151,30 @@ input[type=password] {
   color: #7c302b;
 }
 
-.login-title{
-  margin-left: 6rem;
-  margin-top: 6rem;
-}
-
 .login-button {
     font-family: 'Poiret One', cursive;
 
 }
-/* .join-form{
-  margin-left: 5rem;
-  margin-top: 5.5rem;
-} */
 
 .join-title{
-  margin-left: 6rem;
-  margin-top: 11.2rem;
+  margin-top: 2rem;
 }
 
 .card-landing {
-  /* background-image: url(../img/bcrypt_logo.svg);
-  background-color:rgba(0, 0, 0, 0.5); */
-  background-position-y: 70%;
-  background-position-y: 70%;
-  background-repeat: no-repeat;
-  background-size: contain;
+
+  padding-top: 2rem;
   color: rgb(185, 200, 228);
-  /* margin: 2rem 0 0 6rem; */
-  /* height: 6.25rem; */
-  width: 12rem;
+  width: 7rem;
 }
 
-.passcard {
-  background-position-y: 70%;
-  background-repeat:no-repeat;
-  background-size: contain;
-  margin: 2rem 0 0 6rem;
-  height: 6.25rem;
-  width: 12rem;
-
+.card-landing > p{
+  font-size: 0.85rem;
 }
 
 @media only screen and (max-width: 600px) {
 
   .bcrypt-container, .film-roll {
-width: 70%;
+    width: 70%;
   }
 
   .bcrypt-container {

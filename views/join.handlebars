@@ -2,44 +2,50 @@
 <div class="row justify-center">
     <div class="col-md-6">
 
-    <div class="film-roll-signup">   
+        <div class="film-roll-signup">   
+            <div class = "card-rounded">
+                <div class="col-9">
 
-    <div class = "card-banner card-rounded">
-        <div class="card-header display-flex align-center join-title">
-        <h2>Signup</h2>
-    </div>
+                    <form class="form join-form">
 
-    <div class="col-9">
-        <form class="form join-form">
-            <div class="form-group">
-                <label for="name-signup">name:</label>
-                <input class="form-input" type="text" id="name-signup" />
+                        <div class="card-header join-title">
+                            <h2>Signup</h2>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name-signup">name:</label>
+                            <input class="form-input" type="text" id="name-signup" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email-signup">email:</label>
+                            <input class="form-input" type="text" id="email-signup" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password-signup">password:</label>
+                            <input class="form-input" type="password" id="password-signup" />
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-primary" type="submit">signup</button>
+                        </div>
+
+                        <div class="form-group"></div>
+                            <a  href="/login">
+                                <div class="login-button">ø Already joined? Click here to login. </div>
+                            </a>
+                        </div>
+                        {{!-- <div class="bcrypt-container">Your password is safe with </div> --}}
+                        
+                        <div class="card-landing">
+                            <p>Your password is protected with: </p>
+                            <img src="../img/bcrypt_logo.svg" class="card-img-top" alt="...">
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="email-signup">email:</label>
-                <input class="form-input" type="text" id="email-signup" />
-            </div>
-            <div class="form-group">
-                <label for="password-signup">password:</label>
-                <input class="form-input" type="password" id="password-signup" />
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary" type="submit">signup</button>
-            </div>
-            <div class="form-group"></div>
-                <a  href="/login">
-                    <div class="login-button">▶️ Already joined? Click here to log in. ◀️</div>
-                </a>
-            </div>
-            {{!-- <div class="bcrypt-container">Your password is safe with </div> --}}
-            
-              <div class="card-landing">
-                <a>
-                            Your password is safe with 
-                  </a>
-                <img src="../img/bcrypt_logo.svg" class="card-img-top" alt="...">
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
