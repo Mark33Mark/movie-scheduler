@@ -15,6 +15,7 @@
                                         <span class="genres">  {{ genre.genre_name }} | </span>    
                                     {{/each}}
                                 </h5>
+
                                 <span class="card-poster">
                                     <img src = "https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" height="90px" width="60px"/> 
                                 </span>   
@@ -28,3 +29,9 @@
     </div>
     
 </div>
+
+                {{!-- <h6 class="p-2 release-date">Release date: {{format_date movie.release_date}}</h6>
+                <h6 class="p-2 release-date">Language: {{movie.language}}</h6>
+                <h6 class="p-2 release-date">Popularity score {{movie.popularity}}</h6>
+                    <div class="movie-overview">
+                        <h5>Overview: <br><br>{{ movie.overview }}<br><br></h5> --}}

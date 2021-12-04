@@ -27,7 +27,6 @@
 
   
 </head>
-<div class="bg-image"></div>
 <header>
   <!-- ================================================ --> 
   {{!-- <div class="flex-column justify-space-around">
@@ -43,11 +42,11 @@
           </li>
           <span class="divider">|</span> 
           <li>
-            <a href="/dashboard" >Dashboard</a>
+          {{#if logged_in}}
+            <a href="/dashboard" >dashboard</a>
           </li>
           <span class="divider">|</span> 
           <li>
-            {{#if logged_in}}
             <a href="logout"><span id="log-out">logout</span></a>
           </li>
           <span class="divider">|</span> 
