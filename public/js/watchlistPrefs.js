@@ -13,7 +13,7 @@
     notice_period.style.display='none';
     release_label.style.display='none';
   } else {
-    // notice_checkbox.checked = true;
+    notice_checkbox.checked = true;
     notice_label.style.display='inline';
     notice_period.style.display='inline';
     release_label.style.display='inline';
@@ -48,7 +48,7 @@ const updateFormHandler = async (event) => {
   if(notified===false){
     notification_period = null;
   } else {
-  notification_period = notice_period.value.trim();
+    notification_period = notice_period.value.trim();
   }
 
   // get the post id from the url
