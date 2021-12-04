@@ -40,6 +40,10 @@
   visibility: hidden;
 }
 
+select.notice{
+  margin-left: 1rem;
+}
+
 .release{
   font-size: 2rem;
   font-weight: 600;
@@ -98,6 +102,8 @@ header {
 
 .landscape-movie-pic{
   flex: 0 0 100%;
+  width: 100%;
+  height: auto;
 }
 
 .no-button:hover{
