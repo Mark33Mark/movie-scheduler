@@ -38,8 +38,7 @@ checkBoxChange = () =>{
 
                                             
 const updateFormHandler = async ( event ) => {
-  console.log(event)
-  event.preventDefault();
+
   let notification_period = "";
 
   // get the checkbox status
