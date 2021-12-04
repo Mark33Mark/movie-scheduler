@@ -136,32 +136,29 @@
 </div> --}}
 
 <div class="container">
-<div class="row">
+<div class="row moviespage">
 
     {{#each movie_found as |movie|}}
 
-        <div class="col-sm-12 col-lg-6">
-            <a href="../../api/movie/{{ movie.id }}">
-                <h3 class="p-2 text-center font-weight-bold">{{ movie.title }} <br />|
+            <div class="col-sm-12 col-lg-6">
+                <a href="../../api/movie/{{ movie.id }}">
+                <h3 class="p-2 text-center font-weight-bold">{{ movie.title }} <br />
+                    {{!-- {{#each genres as | genre |}} 
+                <h6 class="genres font-weight-light">  {{ genre.genre_name }}  </h6>    
+                    {{/each}} --}}
 
-
-                    {{#each genres as | genre |}} 
+                                        {{#each genres as | genre |}} 
                         <span class="genres font-weight-light">  {{ genre.genre_name }} | </span>    
                     {{/each}}
-                                <h6 class="p-2 release-date">Movie release date: {{format_date movie.release_date}}</h6>
-            <h6 class="p-2 release-date">Language: {{movie.language}}</h6>
-            <h6 class="p-2 release-date">Popularity score (aggregation of fans scores): {{movie.popularity}}</h6>
 
-                </h3>
-            </a>
-
-
-                <div class="movie-overview">
-                    <h5>Overview: <br><br>{{ movie.overview }}<br><br></h5>
-                </div>
+                <h6 class="p-2 release-date">Release date: {{format_date movie.release_date}}</h6>
+                <h6 class="p-2 release-date">Language: {{movie.language}}</h6>
+                <h6 class="p-2 release-date">Popularity score {{movie.popularity}}</h6>
+                    <div class="movie-overview">
+                        <h5>Overview: <br><br>{{ movie.overview }}<br><br></h5>
+                    </div>
             </div> 
-
-            <div class="col-sm-12 col-lg-6">
+            <div class="col-sm-12 col-lg-12 movieposter">
                 {{#if movie.poster_path }}
                 <span class="card-poster">
                     <img src = "https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" class="img-fluid" alt="" height="100%" width="100%"/> 
@@ -180,12 +177,13 @@
 
             </div>     
 
-                <div 
+                <div>
 
 
                 {{#if usermovies}}             
                     {{#each usermovies as | prefs |}}
 
+</div>
                     <div class="row justify-center">
                         <div class="col-md-6">
 

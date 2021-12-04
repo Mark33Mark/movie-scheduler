@@ -16,19 +16,10 @@
     background: rgb(50, 50, 50);
   }
 
-.logo-container{
-  width:100vw;
-}
 
-.logo {
-    margin: 0 35vw;
-    width:50%;
-    padding: 1rem 0;
-    max-width: 45rem;
-    /* filter: brightness(0.75); */
-    height: auto;
-}
-
+/* .moviespage {
+  margin-left: 25%;
+} */
 .image-container{
     height: 35rem;  
 }
@@ -62,6 +53,17 @@ a {
   visibility: visible;
 }
 
+h3 {
+  font-family: 'Poiret One', cursive;
+  font-size:50px;
+
+}
+
+.h6 {
+  font-family: 'Poiret One', cursive;
+  font-size:20px;
+
+}
 header {
   padding: 40px;
   text-align: center; 
@@ -69,6 +71,7 @@ header {
   color: white;
   border-bottom-style: solid;
 }
+
 
 .divider{
   padding: 0 2rem;
@@ -87,9 +90,9 @@ header {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+  margin-left: 40%;
 }
 
 .no-button:hover{
@@ -119,18 +122,24 @@ aside {
   color: var(--light);
 }
 
-nav {
-  display: flex;
-  align-items: center;
-}
 
 .movie-overview{
-  color: whitesmoke
+  color: whitesmoke;
+  /* font-family: 'Times New Roman', Times, serif; */
+      /* font-family: 'Permanent Marker', cursive; */
+    font-family: 'Raleway', sans-serif;
+
 }
 
+.movieposter {
+width:auto;
+height: auto;
+}
 .release-date{
   color:whitesmoke;
   padding: 0;
+      font-family: 'Raleway', sans-serif;
+
 }
 
 .user-pref{
@@ -138,3 +147,20 @@ nav {
 }
 
 
+@media only screen and (max-width: 600px) {
+
+  h3 {
+    font-size: 20px;
+  }
+
+  
+}
+
+@media only screen and (max-width: 900px) {
+
+
+
+  .no-button {
+    margin-left: 25%;
+  }
+}

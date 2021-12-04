@@ -171,7 +171,8 @@ aside {
 .card_landing {
       position: absolute;
       bottom: 1px;
-color:#fa7f72;
+color:  rgb(73, 73, 73);
+
 font-size: 10px;
       margin: auto 50%;
       width:40%;
@@ -184,13 +185,23 @@ font-size: 10px;
       height: 60px;
       background:#fa7f72;
     } */
+
   @media only screen and (max-width: 600px) {
 
       #navbarmenu {
         display: flex;
         flex-direction: column;
       }
+        .poster-container {
+          /* /* perspective: 2000px; */
+          width: 10px;
+          height: 20px;  
+          /* left:50%;
+          top:50%;
+          transform:translate(-50%,-50%); */ 
+        }
+      }
   
 
 
-  }
+  

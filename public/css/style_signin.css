@@ -15,7 +15,7 @@
 html {
   font-family: 'Raleway', sans-serif;
 height: 100%;
-    background: gray;
+background: rgb(50, 50, 50);
 }
 
 .logo-container{
@@ -67,11 +67,14 @@ a {
 
 h2 {
     font-family: 'Poiret One', cursive;
+    color: white;
 
 }
 
 .form {
   font-family: 'Raleway', sans-serif;
+  color: white;
+
 }
 header {
   padding: 40px;
@@ -135,28 +138,29 @@ nav {
   align-items: center;
 }
 
-.film-roll{
+/* .film-roll{
   position: absolute;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
   width: 40rem;
   height: 40rem;
-  /* background-image: url("../img/film_roll_png.png"); */
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
+
+
 
 .film-roll-signup{
-  position: absolute;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40rem;
-  height: 55rem;
-  background-image: url("../img/film_roll_png.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  position: absolute; 
+    /* display: inline-block; */
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 40rem; */
+    height: 55rem;
+    /* background-image: url(../img/img_514815.png); */
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
 }
 
 .login-form{
@@ -166,13 +170,13 @@ nav {
 }
 
 input[type=text] {
-  background-color: #577a6d;
-  color: white;
+  background-color:rgb(185, 200, 228);
+  color: #7c302b;
 }
 
 input[type=password] {
-  background-color: #577a6d;
-  color: white;
+  background-color:rgb(185, 200, 228);
+  color: #7c302b;
 }
 
 .login-title{
@@ -184,38 +188,47 @@ input[type=password] {
     font-family: 'Poiret One', cursive;
 
 }
-.join-form{
+/* .join-form{
   margin-left: 5rem;
   margin-top: 5.5rem;
-}
+} */
 
 .join-title{
   margin-left: 6rem;
   margin-top: 11.2rem;
 }
 
-.bcrypt-container{
-  background-image: url(../img/bcrypt_logo.svg);
-  background-color:rgba(0, 0, 0, 0.5);
+.card-landing {
+  /* background-image: url(../img/bcrypt_logo.svg);
+  background-color:rgba(0, 0, 0, 0.5); */
   background-position-y: 70%;
-  background-repeat:no-repeat;
+  background-position-y: 70%;
+  background-repeat: no-repeat;
   background-size: contain;
-  color:whitesmoke;
-  margin: 2rem 0 0 6rem;
-  height: 6.25rem;
+  color: rgb(185, 200, 228);
+  /* margin: 2rem 0 0 6rem; */
+  /* height: 6.25rem; */
   width: 12rem;
 }
 
+.passcard {
+  background-position-y: 70%;
+  background-repeat:no-repeat;
+  background-size: contain;
+  margin: 2rem 0 0 6rem;
+  height: 6.25rem;
+  width: 12rem;
+
+}
 
 @media only screen and (max-width: 600px) {
 
   .bcrypt-container, .film-roll {
-width: 90%;
+width: 70%;
   }
 
   .bcrypt-container {
-    width: 100%;
-    max-width: 100%;
+    width: 70%;
   }
 
 

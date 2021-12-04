@@ -15,8 +15,8 @@
 html {
   font-family: system-ui;
   /* background: #3d76d9; */
-  /* background: rgb(50, 50, 50); */
-  background: url("../img/2613059.jpeg");
+  background: rgb(50, 50, 50);
+  /* background: url("../img/2613059.jpeg"); */
   height: 100%;
     background-size:cover;
     background-attachment: fixed;
@@ -138,3 +138,28 @@ nav {
   align-items: center;
 }
 
+.card {
+  width: 50%;
+  border-radius: 25%;
+  background-color: pink;
+  margin: 0 auto;
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .card-poster {
+    display: flex;
+    flex-direction: column;
+  }
+  
+      .card {
+      width: 100%
+      
+    }
+  }
+
+
+  
+  
