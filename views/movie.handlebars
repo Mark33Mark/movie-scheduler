@@ -144,17 +144,15 @@
             <a href="../../api/movie/{{ movie.id }}">
                 <h3 class="p-2 text-center font-weight-bold">{{ movie.title }} <br />|
 
-
                     {{#each genres as | genre |}} 
                         <span class="genres font-weight-light">  {{ genre.genre_name }} | </span>    
                     {{/each}}
-                                <h6 class="p-2 release-date">Movie release date: {{format_date movie.release_date}}</h6>
-            <h6 class="p-2 release-date">Language: {{movie.language}}</h6>
-            <h6 class="p-2 release-date">Popularity score (aggregation of fans scores): {{movie.popularity}}</h6>
+                        <h6 class="p-2 release-date">Movie release date: {{format_date movie.release_date}}</h6>
+                        <h6 class="p-2 release-date">Language: {{movie.language}}</h6>
+                        <h6 class="p-2 release-date">Popularity score (aggregation of fans scores): {{movie.popularity}}</h6>
 
                 </h3>
             </a>
-
 
                 <div class="movie-overview">
                     <h5>Overview: <br><br>{{ movie.overview }}<br><br></h5>
@@ -282,3 +280,4 @@
         {{/each}}
     </div>
 </div>
+
