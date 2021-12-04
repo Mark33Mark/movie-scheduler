@@ -13,9 +13,9 @@
 
 
 html {
-  font-family: system-ui;
-  /* background: #3d76d9; */
-  background: gray;
+  font-family: 'Raleway', sans-serif;
+height: 100%;
+    background: gray;
 }
 
 .logo-container{
@@ -23,17 +23,18 @@ html {
 }
 
 .logo {
-    margin: 0 25vw;
-    width:50%;
-    padding: 1rem 0;
+    /* margin: 0 25vw; */
+    width:33%;
+    /* padding: 1rem 0;
     max-width: 45rem;
-    /* filter: brightness(0.75); */
+    filter: brightness(0.75); */
     height: auto;
 }
 
 .image-container{
     height: 35rem;  
 }
+
 
 .movie-info > p {
     bottom: 0;
@@ -64,6 +65,14 @@ a {
   visibility: visible;
 }
 
+h2 {
+    font-family: 'Poiret One', cursive;
+
+}
+
+.form {
+  font-family: 'Raleway', sans-serif;
+}
 header {
   padding: 40px;
   text-align: center; 
@@ -153,6 +162,17 @@ nav {
 .login-form{
   margin-left: 5rem;
   margin-top: 5.5rem;
+  
+}
+
+input[type=text] {
+  background-color: #577a6d;
+  color: white;
+}
+
+input[type=password] {
+  background-color: #577a6d;
+  color: white;
 }
 
 .login-title{
@@ -160,6 +180,10 @@ nav {
   margin-top: 6rem;
 }
 
+.login-button {
+    font-family: 'Poiret One', cursive;
+
+}
 .join-form{
   margin-left: 5rem;
   margin-top: 5.5rem;
@@ -185,7 +209,7 @@ nav {
 
 @media only screen and (max-width: 600px) {
 
-  .film-roll {
+  .bcrypt-container, .film-roll {
 width: 90%;
   }
 
