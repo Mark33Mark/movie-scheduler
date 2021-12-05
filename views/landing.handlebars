@@ -17,18 +17,18 @@
                 <p class="poster_counter" style="font-size: 2rem;">{{movie.id}}.</p>
             </a>
             {{/if}}
-        
-            <div class="movie-info">
-                <div class="centered">
-                <p class="title">{{movie.title}}</p>
-                <div class="date-align">
-                <p class="release">{{format_date movie.release_date}}</p>
+            
+            <a href="/api/movie/{{ movie.id }}">
+                <div class="movie-info">
+                    <div class="centered">
+                    <p class="title">{{movie.title}}</p>
+                    <div class="date-align">
+                    <p class="release">{{format_date movie.release_date}}</p>
+                    </div>
                 </div>
-               </div>
+            </a>
             </div>
         </div>
-
-
 
     {{/each}}
 
