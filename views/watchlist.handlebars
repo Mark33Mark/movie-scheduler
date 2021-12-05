@@ -18,9 +18,18 @@
                                     <span class="genres">Release date: {{format_date movie.release_date}} </span>
                                 </h5>
                                 
-
                                 <span class="card-poster">
-                                    <img src = "https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" height="90px" width="60px"/> 
+
+                                    {{#if movie.poster_path}}
+                                    <a href="/api/movie/{{ movie.id }}">
+                                        <img src = "https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" height="90px" width="60px"/> 
+                                    </a>
+                                    {{else}}
+                                    <a href="/api/movie/{{ movie.id }}">
+                                        <img src = "./img/PlaceHolder.jpg" alt="" height="90px" width="60px"/> 
+                                    </a>
+                                    {{/if}}
+
                                 </span>   
                             </div>
                         </div>

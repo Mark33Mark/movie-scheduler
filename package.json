@@ -4,14 +4,9 @@
   "description": "Application that lets users know when new release movies are scheduled for release.",
   "main": "server.js",
   "scripts": {
-    "postinstall": "postinstall",
-    "prepare": "postinstall",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seed": "node seeds/seed.js"
-  },
-  "postinstall": {
-    "<modulename>/path": "seedDatabase seeds/"
   },
   "keywords": [],
   "author": "",
