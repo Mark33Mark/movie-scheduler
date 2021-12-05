@@ -26,7 +26,6 @@
       <link type="text/css" rel="stylesheet" href="../../css/nav.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poiret+One&family=Raleway&display=swap" rel="stylesheet">    
 
-
 </head>
 
   <!-- ================================================ --> 
@@ -38,25 +37,25 @@
     </a>
 
     <nav>
-        <ul id="navbarmenu">
-            <li>
-              <a href="/" >movies</a>
-            </li>
-            <span class="divider">|</span> 
-            <li>
-              <a href="/dashboard" >dashboard</a>
-            </li>
-            <span class="divider">|</span> 
-              {{#if logged_in}}
-            <li>
-              <a href="logout"><span id="log-out">logout</span></a>
-            </li>
-              {{else}}
-            <li>
-              <a href="/login">login</a>
-            </li>
-              {{/if}}
-        </ul>
+      <ul id="navbarmenu">
+        <li>
+          <a href="/" >movies</a>
+        </li>
+        <span class="divider">|</span> 
+        <li>
+          <a href="/dashboard" >dashboard</a>
+        </li>
+        <span class="divider">|</span> 
+          {{#if logged_in}}
+        <li>
+          <a href="logout"><span id="log-out">logout</span></a>
+        </li>
+          {{else}}
+        <li>
+          <a href="/login">login</a>
+        </li>
+          {{/if}}
+      </ul>
     </nav>
 
   </header>

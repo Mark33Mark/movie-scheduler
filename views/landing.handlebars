@@ -3,44 +3,44 @@
         <div class="ring">
 
 
-    {{#each movieInfo as |movie|}}
-        
-        <div class="img">
-            {{#if movie.poster_path}}
-            <a href="/api/movie/{{ movie.id }}">
-                <img src = "https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" height="600px" width="400px"/> 
-                <p class="poster_counter" style="font-size: 2rem;">{{movie.id}}.</p>
-            </a>
-            {{else}}
-            <a href="/api/movie/{{ movie.id }}">
-                <img src = "./img/PlaceHolder.jpg" alt="" height="600px" width="400px"/> 
-                <p class="poster_counter" style="font-size: 2rem;">{{movie.id}}.</p>
-            </a>
-            {{/if}}
-            
-            <a href="/api/movie/{{ movie.id }}">
-                <div class="movie-info">
-                    <div class="centered">
-                    <p class="title">{{movie.title}}</p>
-                    <div class="date-align">
-                    <p class="release">{{format_date movie.release_date}}</p>
-                    </div>
+                        {{#each movieInfo as |movie|}}
+                            
+                            <div class="img">
+                                {{#if movie.poster_path}}
+                                <a href="/api/movie/{{ movie.id }}">
+                                    <img src = "https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" height="600px" width="400px"/> 
+                                    <p class="poster_counter" style="font-size: 2rem;">{{movie.id}}.</p>
+                                </a>
+                                {{else}}
+                                <a href="/api/movie/{{ movie.id }}">
+                                    <img src = "./img/PlaceHolder.jpg" alt="" height="600px" width="400px"/> 
+                                    <p class="poster_counter" style="font-size: 2rem;">{{movie.id}}.</p>
+                                </a>
+                                {{/if}}
+                                
+                        <a href="/api/movie/{{ movie.id }}">
+                            <div class="movie-info">
+                                <div class="centered">
+                                    <p class="title">{{movie.title}}</p>
+                                    <div class="date-align">
+                                        <p class="release">{{format_date movie.release_date}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                 </div>
-            </a>
+
+            {{/each}}
+
+            <div id="poster-count" style="display: none;">
+                {{posterCount}}
             </div>
+
         </div>
-
-    {{/each}}
-
-<div id="poster-count" style="display: none;">
-    {{posterCount}}
-</div>
-
-   </div>
     </div>
-  </div>
-
-
-<div class="card_landing">
-← ----- scroll / touch horizontally along here to move through posters ----- →
 </div>
+
+
+    <div class="card_landing">
+        ← ----- scroll / touch horizontally along here to move through posters ----- →
+    </div>

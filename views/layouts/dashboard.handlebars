@@ -33,71 +33,47 @@
   
 </head>
 
-<header>
-  <!-- ================================================ --> 
+<!-- ================================================ --> 
 
-    <a href="/"><img class="logo" src="./img/FlickedLogo.png" height="25%" width="25%"/></a>
+  <header>
+
+    <a href="/">
+      <img class="logo" src="./img/FlickedLogo.png" height="25%" width="25%"/>
+    </a>
 
     <nav>
-        <ul id="navbarmenu">
-            <li>
-              <a href="/" >movies</a>
-            </li>
-            <span class="divider">|</span> 
-            <li>
-              {{#if logged_in}}
-              <a href="logout"><span id="log-out">logout</span></a>
-            </li>
-              {{else}}
-            <li>
-              <a href="/login">login</a>
-            </li>
-              {{/if}}
-        </ul>
+      <ul id="navbarmenu">
+        <li>
+          <a href="/" >movies</a>
+        </li>
+        <span class="divider">|</span> 
+        <li>
+          {{#if logged_in}}
+          <a href="logout"><span id="log-out">logout</span></a>
+        </li>
+          {{else}}
+        <li>
+          <a href="/login">login</a>
+        </li>
+          {{/if}}
+      </ul>
     </nav>
 
+  </header>
 
-</header>
-       
-        {{!-- <nav>
-          <div class="pb-3" >
-            <a href="/" >home</a>
-            <span class="divider">|</span> 
+      </div>
 
-            <!-- Conditionally render login or logout links -->
-            {{#if logged_in}}
-            <a href="/logout"><span id="log-out">logout</span></a>
-            {{else}}
-            <a href="/login">login</a>
-            <span class="divider">|</span> 
-            <a href="/join">join</a>
-            {{/if}}
-          </div>
-        </nav>  --}}
-
-        {{!-- <div class="logo-container">
-            <a href="#"><img class="logo" src="./img/FlickedLogo.png" />
-        </div> --}}
-
-        {{!-- <h1 class="text-white">
-          <a href="/dashboard">Dashboard</a>
-        </h1>
-      </header> --}}
+      <main class="container container-fluid mtop">
+        <!-- Render the sub layout -->
+        {{{ body }}}
+      </main>
 
     </div>
 
-    <main class="container container-fluid mtop">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-
-    
-  </div>
-
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="./js/logout.js"></script>
-  {{/if}}
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+    <script src="./js/logout.js"></script>
+    {{/if}}
 
 
 
