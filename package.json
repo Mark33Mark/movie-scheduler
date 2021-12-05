@@ -1,12 +1,17 @@
 {
-  "name": "crowd-funding",
+  "name": "movie-scheduler",
   "version": "1.0.0",
-  "description": "A blog style website for users to post articles with commentary, edit posts, and comment on other user's articles relating to technology.",
+  "description": "Application that lets users know when new release movies are scheduled for release.",
   "main": "server.js",
   "scripts": {
+    "postinstall": "postinstall",
+    "prepare": "postinstall",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seed": "node seeds/seed.js"
+  },
+  "postinstall": {
+    "<modulename>/path": "seedDatabase seeds/"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +24,7 @@
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
+    "postinstall": "*",
     "sequelize": "^6.3.5"
   },
   "devDependencies": {
