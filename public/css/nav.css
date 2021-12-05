@@ -28,7 +28,10 @@ figure {
         width:100%;
 text-align:center;
     }
-
+    
+.divider{
+  color: rgb(185, 200, 228);
+}
 /* #logo {
         display:inline-block;
 margin: 0 auto;
