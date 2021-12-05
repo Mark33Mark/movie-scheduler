@@ -50,19 +50,16 @@ html {
 }
 
 .logo-container{
-  /* padding-top:20rem; */
   width:100vw;
 }
 
 .logo {
-    /* margin: 0 35vw; */
-    width:33%;
-    /* padding: 50px;
-    padding: 1rem 0; */
-    /* max-width: 45rem; */
-    /* filter: brightness(0.75); */
-   height: auto;
- } 
+  width:35%;
+  margin-left:-1.5rem;
+  min-width:20rem;
+  max-width: 30rem;
+  height: auto;
+}
 
 .image-container{
     height: 35rem;  
