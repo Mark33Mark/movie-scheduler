@@ -16,10 +16,10 @@
     transform-style: preserve-3d;
     user-select:none;
   }
-/*   
+  
   html, body, .stage {
     overflow:hidden;
-  } */
+  }
 
   nav{
     z-index:10;
@@ -39,35 +39,11 @@
   }
 
 html {
-  font-family: system-ui;
-  /* background: #3d76d9; */
-  background: rgb(50, 50, 50);
-  height: 100%;
-    /* background-image: url("../img/film_roll_png.png"); */
-    /* background-image: url("../images/white.jpeg"); */
-    /* background-size:cover; */
-    /* background-attachment: fixed; */
-    /* background-position: center;
-    background-repeat: no-repeat;  */
+    font-family: system-ui;
+    background: rgb(50, 50, 50);
+    height: 100%;
     text-size-adjust: 10px;
-  /* background: url("../img/4560048.jpeg"); */
-  /* filter: blur(8px);
-  -webkit-filter: blur(8px); */ 
 }
-
-/* .bg-image {
-
-  background-image: url("../img/4560048.jpeg");
-  
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-  
-  height: 100%; 
-  
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
 
 .watchlist-cards{
   margin-left:50%;
@@ -192,7 +168,7 @@ aside {
 
   @media only screen and (max-width: 600px) {
 
-      #navbarmenu {
+      nav {
         display: flex;
         flex-direction: column;
       }
@@ -200,7 +176,6 @@ aside {
           
           width: 10px;
           height: 20px;  
-
         }
 
         .logo {
@@ -214,18 +189,22 @@ aside {
             width: 100%;
           }
 
+          nav {
+            display: flex;
+            flex-direction: column;
+          }
+
           .logo {
-            width:100%;
+            width:70%;
             height: auto;
+            transform:translate(5%,-10%);
           } 
 
           .poster-container {
             /* perspective: 2000px; */
             width: 10px;
-            height: 20px;  
-            left:50%;
-            top:50%;
-            transform:translate(-50%,-50%);
+            height: 10px;  
+            top:30%;
           }
         }
 
