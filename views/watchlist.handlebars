@@ -21,11 +21,11 @@
                                 <span class="card-poster">
 
                                     {{#if movie.poster_path}}
-                                    <a href="/api/movie/{{ movie.id }}">
+                                    <a href="/api/movie/{{ movie.usermovie.movie_id }}">
                                         <img src = "https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" height="90px" width="60px"/> 
                                     </a>
                                     {{else}}
-                                    <a href="/api/movie/{{ movie.id }}">
+                                    <a href="/api/movie/{{ movie.usermovie.movie_id }}">
                                         <img src = "./img/PlaceHolder.jpg" alt="" height="90px" width="60px"/> 
                                     </a>
                                     {{/if}}
@@ -35,9 +35,9 @@
                         </div>
                     </div>
                 </a>
-                <div style="display:inline-block;">
-                    <img src="./img/delete.png" alt="" height="15%" width="15%" onClick="deleteButtonHandler({{ movie.usermovie.movie_id }});"/>
-                </div>
+                <span class="delete-icon" style="display:inline-block;">
+                    <img src="./img/delete.png" alt="" height="100%" width="100%" onClick="deleteButtonHandler({{ movie.usermovie.movie_id }});"/>
+                </span>
             {{/each}}
         {{/each}}
     </div>

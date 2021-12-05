@@ -5,7 +5,7 @@
         
         <div class="flex-row moviespage  align-baseline">
 
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
 
                 <div class="flex-row flex-no-wrap justify-evenly">
 
@@ -23,9 +23,9 @@
             
                 <div class="col-12 movieposter">
                     {{#if movie.poster_path }}
-                        <img src = "https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" class="img-fluid" alt="" height="50%" width="50%"/> 
+                        <img src = "https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" class="img-fluid" alt="" height="100%" width="100%"/> 
                     {{else}}
-                        <img src = "../../img/PlaceHolder.jpg" alt="" height="50%" width="50%"/> 
+                        <img src = "../../img/PlaceHolder.jpg" alt="" height="100%" width="100%"/> 
                     {{/if}} 
                 </div>  
             </div>
@@ -40,7 +40,7 @@
                                     <h2>This film is in your watchlist.</h2>
                                 </div>
 
-                                <div class="col-9">
+                                <div class="col-sm-12 col-m-10">
                                     <form class="form  pb-3" id="preferences">
                                         <div class="form-group">
                                             <label for="notification" id="notify-me">Notification preference: 
@@ -93,7 +93,7 @@
                                 <h2>Add this film to your watchlist?</h2>
                             </div>
 
-                            <div class="col-9">
+                            <div class="col-sm-12 col-m-10">
                                 <form class="form  pb-3" id="add-preferences">
                                     <div class="form-group">
                                         <label for="notification" id="add-notify-me">Notification preferences: 

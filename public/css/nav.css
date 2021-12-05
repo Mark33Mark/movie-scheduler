@@ -3,14 +3,16 @@
 header {
     padding: 1rem;
 }
+
 #navbarmenu {
     display:table; 
     margin:0 auto; 
     text-align:center; 
-    }
+}
+
 #navbarmenu ul {
 list-style:none;
-display:inline-block; /* IE6/7 haslayout trip-switch */
+display:inline-block; /* IE6/7 has layout trip-switch */
 }
 
 #navbarmenu li {
@@ -19,15 +21,15 @@ display:inline;
 
 #navbarmenu a {
 text-decoration:none; 
-padding:0 30px; /* variable width */
+padding:0 1rem; /* variable width */
 font-family: 'Raleway', sans-serif;
 color: rgb(185, 200, 228);
 }
 
 figure {
-        width:100%;
-text-align:center;
-    }
+  width:100%;
+  text-align:center;
+}
     
 .divider{
   color: rgb(185, 200, 228);
