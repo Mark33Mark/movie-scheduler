@@ -23,7 +23,9 @@ background: rgb(50, 50, 50);
 }
 
 .logo {
-    width:33%;
+    width:40%;
+    min-width:20rem;
+    max-width: 40rem;
     height: auto;
 }
 
@@ -33,15 +35,15 @@ background: rgb(50, 50, 50);
 
 
 .movie-info > p {
-    bottom: 0;
-    width: 382px;
-    text-decoration: none;
-    padding: 0.3rem 0.5rem;
-    text-align: left;
-    overflow-y: auto;
-    color: black;
-    font-size: 3.5rem;
-    background: rgba(255,255,255,0.9);
+  bottom: 0;
+  width: 382px;
+  text-decoration: none;
+  padding: 0.3rem 0.5rem;
+  text-align: left;
+  overflow-y: auto;
+  color: black;
+  font-size: 3.5rem;
+  background: rgba(255,255,255,0.9);
 }
 
 .movie-info{
@@ -137,8 +139,6 @@ nav {
 .film-roll-signup{
   margin-left: auto;
   margin-right: auto;
-  width: 40rem; 
-
 }
 
 input[type=text] {
@@ -156,19 +156,22 @@ input[type=password] {
 
 }
 
-.join-title{
+.join-title, .login-title{
   margin-top: 2rem;
 }
 
-.card-landing {
-
-  padding-top: 2rem;
+.bcrypt-protected{
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
   color: rgb(185, 200, 228);
-  width: 7rem;
+  font-size: 0.9rem;
 }
 
-.card-landing > p{
-  font-size: 0.85rem;
+.card-landing {
+  color: rgb(185, 200, 228);
+  width: 7rem;
+  margin-left: 0.5rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -181,5 +184,24 @@ input[type=password] {
     width: 70%;
   }
 
+  .film-roll-signup{
+    margin-top: -4rem;
+  }
+  form .form-input {
+    width: 100%;
+    padding: 0.25rem;
+    margin: 0.25rem 0;
+    font-size: 1rem;
+  }
+  .card-landing {
+    padding-top: 0.8rem;
+  }
+
+  .bcrypt-protected{
+    margin-top: 2rem;
+    margin-bottom: -0.5rem;
+    margin-left: 0.5rem;
+    font-size: 0.7rem;
+  }
 
 }

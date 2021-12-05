@@ -9,9 +9,9 @@ router.use('/movie', movieRoutes);
 
 
 router.use(( req, res ) => { res.send( 
-    `<h1 style="display: table-cell; width: 100vw; height: 100vh; vertical-align:middle; text-align:center;"> 
+    `<a href="/"><h1 style="display: table-cell; width: 100vw; height: 100vh; text-decoration: none; vertical-align:middle; text-align:center;"> 
     Wrong route ✋
-    </h1>` ); 
+    </h1><a>`); 
 });
 
 module.exports = router;

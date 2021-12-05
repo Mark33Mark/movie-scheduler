@@ -12,14 +12,20 @@
 
   html {
     font-family: system-ui;
-    /* background: #3d76d9; */
     background: rgb(50, 50, 50);
   }
 
+  .logo-container{
+    width:100vw;
+  }
+  
+  .logo {
+      width:35%;
+      min-width:15rem;
+      max-width: 30rem;
+      height: auto;
+  }
 
-/* .moviespage {
-  margin-left: 25%;
-} */
 .image-container{
     height: 35rem;  
 }
@@ -70,7 +76,6 @@ h3 {
 header {
   padding: 40px;
   text-align: center; 
-  /* background: var(--primary); */
   color: white;
   border-bottom-style: solid;
 }
@@ -142,8 +147,11 @@ aside {
 
 }
 
-.movieposter {
+.movieposter>img {
   flex: 0 1 50%;
+  max-height: 20rem;
+  width:auto;
+  
 }
 
 .img-fluid{
@@ -165,9 +173,32 @@ aside {
 
 @media only screen and (max-width: 600px) {
 
+  .movie-details{
+    display: flex;
+  }
+
+  .movieposter>img {
+    max-height: 20rem;
+    width:auto;
+  }
+
   h3 {
     font-size: 20px;
   }
 
+  .divider{
+    display:none;
+  }
+
+  .form-group{
+    padding:0;
+  }
+
+  .form-group>button{
+    padding:0.5rem;
+  }
   
+  #add-to-watchlist{
+    margin-left:0.2rem;
+  }
 }
