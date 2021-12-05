@@ -92,24 +92,40 @@ html {
     height: 35rem;  
 }
 
-.movie-info > p {
-    bottom: 0;
-    width: 382px;
+.movie-info {
+  position: absolute;
+    top: 0px;
+    width: 400px;
+    height: 600px;
     text-decoration: none;
-    padding: 0.3rem 0.5rem;
-    text-align: left;
-    overflow-y: auto;
-    color: black;
+    text-align: center;
+    overflow-y: none;
+    color: white;
     font-size: 3.5rem;
-    background: rgba(255,255,255,0.9);
+    background: rgba(0, 0, 0, 0.795);
+    visibility: hidden;
 }
 
-.movie-info{
-  visibility: hidden;
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width:400px;
+  transform: translate(-50%, -50%);
+}
+
+.date-align {
+text-align: center;
+width:100%;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 900;
 }
 
 .release{
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 600;
 }
 
@@ -148,20 +164,6 @@ header {
   text-decoration: underline;
 }
 
-.project{
-  width: 60rem;
-  border-bottom: 0.25rem solid rgb(230, 230, 230);
-}
-
-.project-name>h2{
-  font-size: 1.6rem;
-}
-
-.funds-needed{
-  text-align: center;
-  background-color: rgb(210, 210, 150);
-}
-
 aside {
   flex: 0;
   background-color: var(--tertiary);
@@ -173,7 +175,7 @@ aside {
 .card_landing {
       position: relative;
       text-align: center;
-      transform: translate(-17.5rem, 35rem);
+      transform: translate(-17.5rem, 30rem);
       color:  rgb(255, 255, 255);
       font-size: 1rem;
       margin: auto 50%;
