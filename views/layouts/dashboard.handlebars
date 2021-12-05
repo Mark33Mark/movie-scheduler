@@ -35,29 +35,26 @@
 
 <header>
   <!-- ================================================ --> 
-  {{!-- <div class="flex-column justify-space-around">
-      <header class="display-flex justify-space-between align-center p-2"> --}}
 
-     {{!-- <div class="logo-container"> --}}
-      <a href="#"><img class="logo" src="./img/FlickedLogo.png" height="25%" width="25%"/></a>
-  {{!-- </div> --}}
-  <nav>
-      <ul id="navbarmenu">
-          <li>
-            <a href="/" >movies</a>
-          </li>
-          <span class="divider">|</span> 
-          <li>
-            {{#if logged_in}}
-            <a href="logout"><span id="log-out">logout</span></a>
-          </li>
-            {{else}}
-          <li>
-            <a href="/login">login</a>
-          </li>
-            {{/if}}
-      </ul>
-  </nav>
+    <a href="/"><img class="logo" src="./img/FlickedLogo.png" height="25%" width="25%"/></a>
+
+    <nav>
+        <ul id="navbarmenu">
+            <li>
+              <a href="/" >movies</a>
+            </li>
+            <span class="divider">|</span> 
+            <li>
+              {{#if logged_in}}
+              <a href="logout"><span id="log-out">logout</span></a>
+            </li>
+              {{else}}
+            <li>
+              <a href="/login">login</a>
+            </li>
+              {{/if}}
+        </ul>
+    </nav>
 
 
 </header>
