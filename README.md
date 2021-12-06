@@ -1,5 +1,6 @@
 ![Mark Watson](./assets/OutdoorCinemaScreen.png)
 ## Movie Scheduler - Flicked
+https://flick3d.herokuapp.com/
 
 [![Github Commits](https://img.shields.io/github/commit-activity/w/Mark33Mark/movie-scheduler)](https://github.com/Mark33Mark/movie-scheduler/commits)
 [![GitHub latest commit](https://img.shields.io/github/last-commit/Mark33Mark/movie-scheduler)](https://github.com/Mark33Mark/movie-scheduler/branches)
@@ -27,7 +28,7 @@
 ---
 ### 1. Description  
 **What is this project?**  
-* An application for users to join and receive information new release movies including their release date.  
+* An application for users to join and view new release movies including their release date.  
 
 **Why this project?**  
 * Movie releases are hard to track sometimes without accessing movie industry news, one example is Avatar 2 that has been promised for a number of years and is now scheduled for release in Dec-2022.  This application provides movie lovers with a convenient tool to quickly get updated with scheduled release dates for movies in the next 12 months.
@@ -37,6 +38,7 @@
 * Users who want the convenience of seeing all scheduled release dates for movies so they can diarise or prepare to see it when released.
 
 **Lessons learnt?**  
+
 A few ideas for this project proved challenging at this moment in time and would be great additions to the site in the future.  
 - Some issues with the use of calling in data was noticed as it showed listings for already released movies which had to be manually overwritten.  
 
@@ -58,16 +60,24 @@ A few ideas for this project proved challenging at this moment in time and would
 - Bcrypt
 
 ### 3. Features  
+* Site hosted on heroku 
+https://flick3d.herokuapp.com/
+
 Features provided:
 
 * View upcoming films in a carousel feature
 
-* Able to view movie after clicking to see film info including a film poster, title, synopsis and genre
+* On first load, users are taken to a login page via the button in navbar or through clicking one of the movie posters.  If not a member, they are asked if they would like to sign up and provide details there to create a user profile.  
 
-* Able to add film to a saved watchlist of upcoming movies
+* Users are able to view a movie after clicking to see film info including a film poster, title, synopsis and genre
 
-* Add settings to be able to be notified of the movie closer to the date of release
+* Users are able to add a film to a saved watchlist of upcoming movies
 
+* Users can add settings to be able to be notified of the movie closer to the date of release
+
+* Users can view a list of saved movies in the dashboard page.  Here they can click through to see the movie page once again.  
+
+* Users can delete movies in the watchlist if no longer interested in viewing them.
   
 #### Screengrab
 
@@ -81,8 +91,11 @@ You can download the source code from [my Github repository](https://github.com/
 ---
 
 ### 5. Usage  
-The code can be downloaded from [my Github repository](https://github.com/Mark33Mark/movie-scheduler) for all assets created for the project.  
+* The code can be downloaded from [my Github repository](https://github.com/Mark33Mark/movie-scheduler) for all assets created for the project.  
 You can modify the code as you need.
+
+* Site hosted on Heroku
+https://flick3d.herokuapp.com/
 
 ---
 ### 6. Credits  
