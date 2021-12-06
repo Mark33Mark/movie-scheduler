@@ -110,7 +110,7 @@ router.put('/:id', withAuth, async (req, res) => {
       });
 
       if(updatePreference) {
-        console.log("OK");
+        console.log("Update successful.");
         res.status(200);
       } else {
         console.log("");

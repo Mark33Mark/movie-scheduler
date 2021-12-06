@@ -69,7 +69,7 @@ const updateFormHandler = async ( ) => {
         // window.location.reload(true);
 
         if (response.ok) {
-          alert(`Your watchlist preference for Movie id: ${movie_id} has now been updated.`);
+          alert(`Your watchlist preference for Movie id: ${movie_id} has been updated.`);
           document.location.replace('/dashboard');
 
         } else {
