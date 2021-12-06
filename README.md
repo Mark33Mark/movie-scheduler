@@ -1,5 +1,4 @@
 ![Mark Watson](./assets/OutdoorCinemaScreen.png)
-# Team Project 2
 ## Movie Scheduler - Flicked
 
 [![Github Commits](https://img.shields.io/github/commit-activity/w/Mark33Mark/movie-scheduler)](https://github.com/Mark33Mark/movie-scheduler/commits)
@@ -38,8 +37,14 @@
 * Users who want the convenience of seeing all scheduled release dates for movies so they can diarise or prepare to see it when released.
 
 **Lessons learnt?**  
-* 
+A few ideas for this project proved challenging at this moment in time and would be great additions to the site in the future.  
+- Some issues with the use of calling in data was noticed as it showed listings for already released movies which had to be manually overwritten.  
 
+- Nodemailer is a useful module but proved difficult for the purposes of the app. It would require a good deal amount of coding to make use of the several preferences users can apply.  
+
+- Using branches further has been helpful in finding out the best way in order to streamline tasks and avoid conflicts.  
+
+- Certain design elements have been used which allow for greater function of the site. Using these in the future will help greatly in formatting a mobile first page.
 ---
 ### 2. Technology
 
@@ -48,18 +53,25 @@
 - Express.js
 - Node.js
 - Sequelize
-- 
+- NodeMailer
+- GSAP
+- Bcrypt
 
 ### 3. Features  
 Features provided:
 
-* 
+* View upcoming films in a carousel feature
 
----  
+* Able to view movie after clicking to see film info including a film poster, title, synopsis and genre
+
+* Able to add film to a saved watchlist of upcoming movies
+
+* Add settings to be able to be notified of the movie closer to the date of release
+
   
 #### Screengrab
 
-![Screengrab]() 
+![Deployed Page](assets/ss-site.png) 
 
 
 ---
