@@ -29,7 +29,7 @@ html {
 
 .logo {
     width:35%;
-    min-width:20rem;
+    min-width:15rem;
     max-width: 30rem;
     height: auto;
 }
@@ -103,43 +103,22 @@ header {
   text-decoration: underline;
 }
 
-.project{
-  width: 60rem;
-  border-bottom: 0.25rem solid rgb(230, 230, 230);
-}
-
-.project-name>h2{
-  font-size: 1.6rem;
-}
-
-.funds-needed{
-  text-align: center;
-  background-color: rgb(210, 210, 150);
-}
-
-aside {
-  flex: 0;
-  background-color: var(--tertiary);
-  padding: 80px;
-  text-align: left;
-  color: var(--light);
-}
-
 nav {
   display: flex;
   align-items: center;
 }
 
+.watchlist-cards{
+  margin-left:22%;
+}
+
 .card {
-  width: 55%;
+  width: 66%;
   border-radius: 25%;
   display:inline-block;
   margin: 0.5rem auto;
 }
 
-.watchlist-cards{
-  margin-left: 33%;
-}
 
 .delete-icon{
   max-width: 2rem;
@@ -154,7 +133,7 @@ nav {
   }
 
   .watchlist-cards{
-    margin-left: 0%;
+    margin-left:5%;
   }
 
   .card {

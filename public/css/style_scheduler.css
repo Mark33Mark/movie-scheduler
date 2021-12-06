@@ -80,7 +80,6 @@ header {
   border-bottom-style: solid;
 }
 
-
 .divider{
   padding: 0 2rem;
 }
@@ -116,29 +115,6 @@ header {
   text-decoration: underline;
 }
 
-.project{
-  width: 60rem;
-  border-bottom: 0.25rem solid rgb(230, 230, 230);
-}
-
-.project-name>h2{
-  font-size: 1.6rem;
-}
-
-.funds-needed{
-  text-align: center;
-  background-color: rgb(210, 210, 150);
-}
-
-aside {
-  flex: 0;
-  background-color: var(--tertiary);
-  padding: 80px;
-  text-align: left;
-  color: var(--light);
-}
-
-
 .movie-overview{
   color: whitesmoke;
   /* font-family: 'Times New Roman', Times, serif; */
@@ -152,6 +128,10 @@ aside {
   max-height: 20rem;
   width:auto;
   
+}
+
+#notice-period, #add-notice-period {
+  padding: 0.5rem; 
 }
 
 .img-fluid{
@@ -172,6 +152,10 @@ aside {
 
 
 @media only screen and (max-width: 600px) {
+
+  .movie-overview>h5{
+    font-size: 1rem;
+  }
 
   .movie-details{
     display: flex;
@@ -200,5 +184,11 @@ aside {
   
   #add-to-watchlist{
     margin-left:0.2rem;
+  }
+
+.landscape-movie-pic>img{
+    width:15rem;
+    margin-left:-1rem;
+    height: auto;
   }
 }

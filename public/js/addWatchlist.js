@@ -33,23 +33,22 @@ const openFormHandler = () => {
 };
 
 const createFormHandler = async ( ) => {
-    event.preventDefault();
+
+    let notification_period; 
+    
     // get the checkbox status
     let notified = add_notice_checkbox.checked;
 
     // get the user selected notification period
-      // get the user selected notification period
     if(notified===false){
         notification_period = null;
     } else {
-    notification_period = add_notice_period.value.trim();
+        notification_period = add_notice_period.value.trim();
     }
 
     // get the post id from the url
     const path = window.location.pathname;
     const movie_id = path.slice(path.lastIndexOf("/")+1);
-
-    console.log("HERE");
 
     console.log(movie_id, notified, notification_period);
 

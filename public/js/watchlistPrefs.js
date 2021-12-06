@@ -37,9 +37,9 @@ checkBoxChange = () =>{
 };
 
                                             
-const updateFormHandler = async ( event ) => {
-
-  let notification_period = "";
+const updateFormHandler = async ( ) => {
+  
+  let notification_period;
 
   // get the checkbox status
   let notified = notice_checkbox.checked;
@@ -66,11 +66,11 @@ const updateFormHandler = async ( event ) => {
         });
 
         console.log(movie_id, notified.value, notification_period);
-        window.location.reload(true);
+        // window.location.reload(true);
 
         if (response.ok) {
-          alert(`Your watchlist preference for Movie id: ${movie_id} has now been updated.`);
-          // document.location.replace('/dashboard');
+          alert(`Your watchlist preference for Movie id: ${movie_id} has been updated.`);
+          document.location.replace('/dashboard');
 
         } else {
           alert('Failed updating the movie watchlist preferences.');
@@ -101,7 +101,7 @@ const deleteButtonHandler = async (event) => {
   }
 };
 
-  
+
 document
   .querySelector('#remove-watching')
   .addEventListener('click', deleteButtonHandler);

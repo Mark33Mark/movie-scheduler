@@ -35,7 +35,6 @@ console.log(req.session.user_id, req.params.id, req.body.notification_period, re
 
 // == READ ====================================================================
 
-
 router.get('/:id', withAuth, async (req, res) => {
 
   const movieID = req.url.replace("/","");
@@ -91,8 +90,6 @@ router.put('/:id', withAuth, async (req, res) => {
   // update the movie_id to integer
   req.body.movie_id = movieID;
 
-  console.log(req.body);
-
   try {
 
     const getUniqueID = await UserMovie.findOne(
@@ -100,19 +97,24 @@ router.put('/:id', withAuth, async (req, res) => {
         where: { movie_id: movieID, user_id: req.body.user_id},
       });
 
-    const updatePreference = await UserMovie.update(
-      {notified: req.body.notified, notification_period: req.body.notification_period},
+    const [updatePreference] = await UserMovie.update({
+        notified: req.body.notified, 
+        notification_period: req.body.notification_period
+      },
       {
-        where: { id:getUniqueID.id},
-        returning: true,
+        where: 
+        { 
+          id:getUniqueID.id
+        },
+
       });
 
       if(updatePreference) {
-        console.log("OK");
+        console.log("Update successful.");
         res.status(200);
       } else {
-        console.log("BAD");
-        res.status(404);
+        console.log("");
+        res.status(200);
       }
 
   } catch (err) {

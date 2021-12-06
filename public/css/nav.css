@@ -42,4 +42,9 @@ figure {
     flex-direction: row;
   }
 
+  
+  header {
+    padding: 0;
+    text-align: center;   
+  }
 }
