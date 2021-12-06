@@ -25,7 +25,10 @@ https://flick3d.herokuapp.com/
    10. [Tests](#10-tests)
    11. [Checklist](#11-checklist)
 
----
+
+![Deployed Page](assets/ss-site.png) 
+
+
 ### 1. Description  
 **What is this project?**  
 * An application for users to join and view new release movies including their release date.  
@@ -63,6 +66,7 @@ A few ideas for this project proved challenging at this moment in time and would
 * Site hosted on heroku 
 https://flick3d.herokuapp.com/
 
+
 Features provided:
 
 * View upcoming films in a carousel feature
@@ -81,7 +85,7 @@ Features provided:
   
 #### Screengrab
 
-![Deployed Page](assets/ss-site.png) 
+![Deployed Page](assets/flicked.gif) 
 
 
 ---
@@ -91,6 +95,7 @@ You can download the source code from [my Github repository](https://github.com/
 ---
 
 ### 5. Usage  
+
 * The code can be downloaded from [my Github repository](https://github.com/Mark33Mark/movie-scheduler) for all assets created for the project.  
 You can modify the code as you need.
 
