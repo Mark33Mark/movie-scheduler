@@ -37,9 +37,9 @@ checkBoxChange = () =>{
 };
 
                                             
-const updateFormHandler = async ( event ) => {
+const updateFormHandler = async ( ) => {
   
-  let notification_period = "";
+  let notification_period;
 
   // get the checkbox status
   let notified = notice_checkbox.checked;
@@ -56,7 +56,7 @@ const updateFormHandler = async ( event ) => {
   const movie_id = path.slice(path.lastIndexOf("/")+1);
 
   console.log(movie_id, notified, notification_period);
-  
+
         const response = await fetch( `/api/movie/${movie_id}`, {
           method: 'PUT',
           body: JSON.stringify({ movie_id, notification_period, notified }),
