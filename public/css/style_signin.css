@@ -1,21 +1,8 @@
-:root {
-    --primary: #389393;
-    /* --secondary: #f5a25d; */
-    --secondary: white;
-    --tertiary: #fa7f72;
-    --quatrinary: #6c6b67;
-    --light: #ebebeb;
-    --dark: #182c23;
-    --error: rgb(228, 46, 1);
-    --border-radius: 0.3rem;
-  }
-
-
 
 html {
   font-family: 'Raleway', sans-serif;
-height: 100%;
-background: rgb(50, 50, 50);
+  height: 100vh;
+  background: rgb(50, 50, 50);
 }
 
 .logo-container{
@@ -24,49 +11,18 @@ background: rgb(50, 50, 50);
 
 .logo {
     width:40%;
-    min-width:20rem;
-    max-width: 40rem;
+    min-width:15rem;
+    max-width: 30rem;
     height: auto;
-}
-
-.image-container{
-    height: 35rem;  
-}
-
-
-.movie-info > p {
-  bottom: 0;
-  width: 382px;
-  text-decoration: none;
-  padding: 0.3rem 0.5rem;
-  text-align: left;
-  overflow-y: auto;
-  color: black;
-  font-size: 3.5rem;
-  background: rgba(255,255,255,0.9);
-}
-
-.movie-info{
-  visibility: hidden;
-}
-
-.release{
-  font-size: 2rem;
-  font-weight: 600;
 }
 
 a { 
     text-decoration: none;
 }
 
-.img:hover .movie-info {
-  visibility: visible;
-}
-
 h2 {
     font-family: 'Poiret One', cursive;
     color: white;
-
 }
 
 .form {
@@ -74,20 +30,16 @@ h2 {
   color: white;
 
 }
+
 header {
-  padding: 40px;
+  padding: 0;
   text-align: center; 
-  /* background: var(--primary); */
   color: white;
   border-bottom-style: solid;
 }
 
 .divider{
   padding: 0 2rem;
-}
-
-.genres{
-  font-size: 1rem;
 }
   
 .no-button{
@@ -109,37 +61,11 @@ header {
   text-decoration: underline;
 }
 
-.project{
-  width: 60rem;
-  border-bottom: 0.25rem solid rgb(230, 230, 230);
-}
-
-.project-name>h2{
-  font-size: 1.6rem;
-}
-
-.funds-needed{
-  text-align: center;
-  background-color: rgb(210, 210, 150);
-}
-
-aside {
-  flex: 0;
-  background-color: var(--tertiary);
-  padding: 80px;
-  text-align: left;
-  color: var(--light);
-}
-
 nav {
   display: flex;
   align-items: center;
 }
 
-.film-roll-signup{
-  margin-left: auto;
-  margin-right: auto;
-}
 
 input[type=text] {
   background-color:rgb(185, 200, 228);
@@ -153,7 +79,7 @@ input[type=password] {
 
 .login-button {
     font-family: 'Poiret One', cursive;
-
+    width: 100vw;
 }
 
 .join-title, .login-title{
@@ -176,17 +102,10 @@ input[type=password] {
 
 @media only screen and (max-width: 600px) {
 
-  .bcrypt-container, .film-roll {
-    width: 70%;
+  form {
+    margin-top: -2rem;
   }
 
-  .bcrypt-container {
-    width: 70%;
-  }
-
-  .film-roll-signup{
-    margin-top: -4rem;
-  }
   form .form-input {
     width: 100%;
     padding: 0.25rem;
@@ -197,11 +116,31 @@ input[type=password] {
     padding-top: 0.8rem;
   }
 
+  form label{
+    font-size: 1rem!important;
+  }
+
   .bcrypt-protected{
     margin-top: 2rem;
     margin-bottom: -0.5rem;
     margin-left: 0.5rem;
     font-size: 0.7rem;
+  }
+
+  .bcrypt-container{
+    width: 70%;
+  }
+
+  .bcrypt-container {
+    width: 70%;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  .login{
+    flex: 0 1 20%;
   }
 
 }

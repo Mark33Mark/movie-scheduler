@@ -1,10 +1,8 @@
 <div class="row">
     <div class="col-auto display-block watchlist-cards">
 
-            {{#each user as | users |}}
-                <h4 class="text-white">Welcome {{name}}</h4>
-
-
+        {{#each user as | users |}}
+            <h4 class="text-white">Welcome {{name}}</h4>            
             {{#each movies as | movie |}} 
                 <a href="/api/movie/{{ movie.usermovie.movie_id }}">
                     <div class="card">
@@ -15,7 +13,7 @@
                                         <span class="genres">  {{ genre.genre_name }} | </span>    
                                     {{/each}}
                                     <br />
-                                    <span class="genres">Release date: {{format_date movie.release_date}} </span>
+                                    <span class="genres">Release: {{format_date movie.release_date}} </span>
                                 </h5>
                                 
                                 <span class="card-poster">

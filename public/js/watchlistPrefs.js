@@ -38,7 +38,7 @@ checkBoxChange = () =>{
 
                                             
 const updateFormHandler = async ( event ) => {
-
+  
   let notification_period = "";
 
   // get the checkbox status
@@ -56,7 +56,7 @@ const updateFormHandler = async ( event ) => {
   const movie_id = path.slice(path.lastIndexOf("/")+1);
 
   console.log(movie_id, notified, notification_period);
-
+  
         const response = await fetch( `/api/movie/${movie_id}`, {
           method: 'PUT',
           body: JSON.stringify({ movie_id, notification_period, notified }),
@@ -66,11 +66,11 @@ const updateFormHandler = async ( event ) => {
         });
 
         console.log(movie_id, notified.value, notification_period);
-        window.location.reload(true);
+        // window.location.reload(true);
 
         if (response.ok) {
           alert(`Your watchlist preference for Movie id: ${movie_id} has now been updated.`);
-          // document.location.replace('/dashboard');
+          document.location.replace('/dashboard');
 
         } else {
           alert('Failed updating the movie watchlist preferences.');
@@ -101,7 +101,7 @@ const deleteButtonHandler = async (event) => {
   }
 };
 
-  
+
 document
   .querySelector('#remove-watching')
   .addEventListener('click', deleteButtonHandler);

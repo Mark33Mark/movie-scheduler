@@ -34,46 +34,43 @@
                 {{#each usermovies as | prefs |}}
 
                     <div class="row flex-row">
-                        <div class="mt-5 ml-4" id="add-to-watchlist">
+                        <div class="col-11 mt-5 ml-4" id="add-to-watchlist">
                             <div class = "card-banner card-rounded user-pref">
                                 <div class="pl-2 pt-2 card-header display-flex align-center">
                                     <h2>This film is in your watchlist.</h2>
                                 </div>
-
-                                <div class="col-sm-12 col-m-10">
-                                    <form class="form  pb-3" id="preferences">
-                                        <div class="form-group">
-                                            <label for="notification" id="notify-me">Notification preference: 
-                                                {{#if prefs.notification_period}}
-                                                {{prefs.notification_period}}
-                                                {{else}}
-                                                Don't Notify
-                                                {{/if}}
-                                            </label><br />
-                                            <label for="change-prefs">Check box to be notified:</label>
-                                            <input type="checkbox" id="notify" name="notify" onclick="checkBoxChange();"><br />
-                                            <label class="pb-4 pt-2" for="change-prefs" id="notice-period-label">Select when to be notified:</label>
-                                            <br /><br />
-                                            <select class="notice" name="notice-period" id="notice-period">
-                                                <option value='1 day'> 1 day</option>
-                                                <option value='2 days'>2 days</option>
-                                                <option value='3 days'>3 days</option>
-                                                <option value='4 days'>4 days</option>
-                                                <option value='5 days'>5 days</option>
-                                                <option value='6 days'>6 days</option>
-                                                <option value='1 week'>1 week</option>
-                                                <option value='2 weeks'>2 weeks</option>
-                                                <option value='3 weeks'>3 weeks</option>
-                                                <option value='1 month'>1 month</option>
-                                            </select> 
-                                            <span id="release-label">before {{format_date movie.release_date}}</span>
-                                        </div>
-                                        <div class="form-group p-2">
-                                            <button class="btn btn-primary" onClick="updateFormHandler();">Update Preferences</button>
-                                            <button class="btn btn-primary" id="remove-watching">Remove?</button>
-                                        </div>
-                                    </form>
-                                </div>
+                                <form class="form pb-3" id="preferences">
+                                    <div class="form-group">
+                                        <label for="notification" id="notify-me">Notification preference: 
+                                            {{#if prefs.notification_period}}
+                                            {{prefs.notification_period}}
+                                            {{else}}
+                                            Don't Notify
+                                            {{/if}}
+                                        </label><br />
+                                        <label for="change-prefs">Check box to be notified:</label>
+                                        <input type="checkbox" id="notify" name="notify" onclick="checkBoxChange();"><br />
+                                        <label class="pb-4 pt-2" for="change-prefs" id="notice-period-label">Select when to be notified:</label><br />
+                                        <br />
+                                        <select class="notice" name="notice-period" id="notice-period">
+                                            <option value='1 day'> 1 day</option>
+                                            <option value='2 days'>2 days</option>
+                                            <option value='3 days'>3 days</option>
+                                            <option value='4 days'>4 days</option>
+                                            <option value='5 days'>5 days</option>
+                                            <option value='6 days'>6 days</option>
+                                            <option value='1 week'>1 week</option>
+                                            <option value='2 weeks'>2 weeks</option>
+                                            <option value='3 weeks'>3 weeks</option>
+                                            <option value='1 month'>1 month</option>
+                                        </select> 
+                                        <span id="release-label">before {{format_date movie.release_date}}</span>
+                                    </div>
+                                    <div class="form-group p-2">
+                                        <button class="btn btn-primary" onClick="updateFormHandler();">Update Preferences</button>
+                                        <button class="btn btn-primary" id="remove-watching">Remove?</button>
+                                    </div>
+                                </form>
                             </div>
                             {{#if movie.backdrop_path }}
                                 <div class="p-3 landscape-movie-pic">
@@ -101,7 +98,7 @@
                                         <label for="change-prefs">Check box to be notified:</label>
                                         <input type="checkbox" id="add-notify" name="notify" onclick="checkBoxChange();" checked><br />
                                         <label class="pb-4 pt-2" for="change-prefs" id="add-notice-period-label">Select when to be notified:</label>
-                                        <br /><br />
+                                        <br />
                                         <select class="notice" name="notice-period" id="add-notice-period">
                                             <option value='1 day'> 1 day</option>
                                             <option value='2 days'>2 days</option>
@@ -115,7 +112,7 @@
                                             <option value='1 month'>1 month</option>
                                         </select> 
                                         <span id="add-release-label">before {{format_date movie.release_date}}</span>
-                                    </div>
+                                    </div><br />
                                     <div class="form-group">
                                         <button class="btn btn-primary" onClick="createFormHandler();">Add to Watchlist</button>
                                         <button class="btn btn-primary" id="cancel-add-watchlist">Cancel</button>
